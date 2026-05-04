@@ -1,0 +1,57 @@
+# artifacts_manifest.yaml
+pack_name: oss-ready-organized-enhanced-pack-en
+version: 2026-05-04
+language_scope: language-independent
+content_language: English
+purpose: >
+ Organized OSS readiness documentation, templates, examples and POSIX shell bootstrap/audit script.
+truth_boundary:
+ - does_not_claim_production_ready
+ - does_not_claim_security_validated
+ - does_not_run_repository_build_test_lint_release
+ - script_does_not_edit_application_source_code
+ - script_does_not_edit_package_manifests_or_lockfiles
+layout:
+ docs: standards, usage, policy and reference docs
+ docs/oss: target-repository OSS readiness policy set
+ scripts: runnable tooling
+ templates: GitHub, GitLab, Renovate and REUSE samples
+ examples: report output examples
+files:
+ - path: README.md
+ - path: docs/OSS_READY_OVERVIEW.md
+ - path: docs/PACKAGE_STRUCTURE.md
+ - path: docs/USAGE.md
+ - path: docs/oss/AI_TOOLING_POLICY.md
+ - path: docs/oss/CONTRIBUTOR_EXPERIENCE.md
+ - path: docs/oss/DEPENDENCY_POLICY.md
+ - path: docs/oss/GOVERNANCE_MODEL.md
+ - path: docs/oss/HOSTING_PLATFORM_SETTINGS.md
+ - path: docs/oss/MAINTAINER_HANDOFF.md
+ - path: docs/oss/OPEN_SOURCE_RELEASE_GATE.md
+ - path: docs/oss/OSS_READINESS_CHECKLIST.md
+ - path: docs/oss/OSS_READINESS_SCORE.md
+ - path: docs/oss/PROVENANCE_POLICY.md
+ - path: docs/oss/README.md
+ - path: docs/oss/RELEASE_PROCESS.md
+ - path: docs/oss/REUSE_SPDX_POLICY.md
+ - path: docs/oss/RUNTIME_OPERATIONS_REVIEW.md
+ - path: docs/oss/SBOM_POLICY.md
+ - path: docs/oss/SECURITY_RESPONSE_PROCESS.md
+ - path: docs/oss/SUPPLY_CHAIN_POLICY.md
+ - path: docs/oss/VALIDATION_MATRIX.md
+ - path: docs/reference/research_reference_map.md
+ - path: examples/oss_readiness_snapshot.example.md
+ - path: examples/run_summary.example.md
+ - path: examples/suggestions.example.md
+ - path: run_summary.md
+ - path: scripts/oss-ready-bootstrap-advanced.sh
+ - path: templates/github/ISSUE_TEMPLATE/bug_report.md
+ - path: templates/github/ISSUE_TEMPLATE/feature_request.md
+ - path: templates/github/pull_request_template.md
+ - path: templates/github/workflows/scorecard.yml
+ - path: templates/gitlab/issue_templates/Bug.md
+ - path: templates/gitlab/issue_templates/Feature.md
+ - path: templates/gitlab/merge_request_templates/Default.md
+ - path: templates/renovate/renovate.json
+ - path: templates/reuse/REUSE.toml.sample

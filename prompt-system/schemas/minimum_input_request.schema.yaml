@@ -1,0 +1,18 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: MinimumInputRequest
+kind: documentation_schema
+properties:
+ blocking_inputs_needed:
+ type: array
+ items:
+ type: object
+ required: [field_name, why_needed, stage_blocked, risk_if_guessed, accepted_format, example]
+ properties:
+ field_name: { type: string }
+ why_needed: { type: string }
+ stage_blocked: { type: string }
+ risk_if_guessed: { type: string }
+ accepted_format: { type: string }
+ example: { type: string }
+ resume_prompt:
+ type: string

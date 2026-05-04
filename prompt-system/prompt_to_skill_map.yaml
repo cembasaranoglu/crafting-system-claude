@@ -1,0 +1,279 @@
+prompt_to_skill_map:
+- skill: adr-rfc-writer
+  prompts:
+  - 148_adr_generator.md
+  - 149_rfc_generator.md
+  - 151_decision_log_adr_index.md
+  - 152_api_rfc_review_gate.md
+- skill: ai-context-builder
+  prompts:
+  - 02_project_context_glossary_memory_builder.md
+  - 05_nontechnical_code_explainer.md
+  - 08_repository_ai_ready_and_skeleton.md
+  - 103_ai_context_compiler_claude_agents_cursor_llms.md
+  - 127_supply_chain_release_reviewer.md
+  - 159_prompt_glossary_catalog_maintainer.md
+- skill: ai-context-compiler
+  prompts:
+  - 02_project_context_glossary_memory_builder.md
+  - 05_nontechnical_code_explainer.md
+  - 08_repository_ai_ready_and_skeleton.md
+  - 103_ai_context_compiler_claude_agents_cursor_llms.md
+  - 127_supply_chain_release_reviewer.md
+  - 159_prompt_glossary_catalog_maintainer.md
+- skill: architecture-fitness
+  prompts:
+  - 07_architecture_design.md
+  - 100_architecture_fitness_functions.md
+  - 120_legacy_to_clean_architecture_migration.md
+  - 136_non_technical_architecture_story.md
+- skill: claude-tuning-playbook
+  prompts:
+  - 00_claude_base_prompt.md
+  - 00_claude_base_prompt_execution_addendum.md
+  - 103_ai_context_compiler_claude_agents_cursor_llms.md
+  - 104_claude_md_generator.md
+  - 160_claude_tuning_playbook_prompt.md
+  - 19_claude_code_context_install_prompt.md
+- skill: code-quality-bar
+  prompts:
+  - 05_nontechnical_code_explainer.md
+  - 115_dead_code_removal_gate.md
+  - 121_security_code_review_persona.md
+  - 122_performance_code_review_persona.md
+  - 123_concurrency_code_review_persona.md
+  - 124_api_compatibility_code_review_persona.md
+- skill: code-review-quality-gate
+  prompts:
+  - 05_nontechnical_code_explainer.md
+  - 115_dead_code_removal_gate.md
+  - 121_security_code_review_persona.md
+  - 122_performance_code_review_persona.md
+  - 123_concurrency_code_review_persona.md
+  - 124_api_compatibility_code_review_persona.md
+- skill: compliance-evidence
+  prompts:
+  - 139_compliance_evidence_collector.md
+  - 141_gdpr_kvkk_privacy_evidence.md
+  - 76_compliance_privacy_audit_readiness.md
+  - 94_evidence_ledger_traceability.md
+- skill: context-map
+  prompts:
+  - 02_project_context_glossary_memory_builder.md
+  - 103_ai_context_compiler_claude_agents_cursor_llms.md
+  - 140_soc2_iso27001_control_mapper.md
+  - 19_claude_code_context_install_prompt.md
+  - 20_documentation_map_and_docs_content_prompt.md
+  - 79_ai_ready_repository_context_readiness.md
+- skill: cursor-rules-compiler
+  prompts:
+  - 103_ai_context_compiler_claude_agents_cursor_llms.md
+  - 106_cursor_rules_generator.md
+  - 161_cursor_advanced_rules_prompt.md
+  - 18_cursor_integration_prompt.md
+- skill: docs-oss-writer
+  prompts:
+  - 02_project_context_glossary_memory_builder.md
+  - 09_readme_and_oss_docs_writer.md
+  - 126_dx_docs_code_review_persona.md
+  - 159_prompt_glossary_catalog_maintainer.md
+  - 162_oss_ready_packager.md
+  - 20_documentation_map_and_docs_content_prompt.md
+- skill: eval-plan
+  prompts:
+  - 10_refactoring_strategy_and_plan.md
+  - 112_strangler_fig_refactoring_plan.md
+  - 129_semantic_commit_atomic_commit_planner.md
+  - 23_wave_planning_and_closure_prompt.md
+  - 89_remediation_wave_planner.md
+- skill: evidence-ledger
+  prompts:
+  - 139_compliance_evidence_collector.md
+  - 141_gdpr_kvkk_privacy_evidence.md
+  - 94_evidence_ledger_traceability.md
+- skill: failure-mode-auditor
+  prompts:
+  - 117_error_model_refactor.md
+  - 118_config_model_refactor.md
+  - 142_mcp_tool_permission_model.md
+  - 145_minimal_patch_mode.md
+  - 93_prompt_upgrade_from_run_failures.md
+- skill: feature-inventory
+  prompts:
+  - 03_feature_inventory_and_readiness_audit.md
+  - 111_safe_refactoring_inventory.md
+- skill: git-safety-automation
+  prompts:
+  - 128_git_branch_strategy_generator.md
+  - 130_protected_branch_signed_release_git_gate.md
+  - 27_git_commit_branch_push_workflow.md
+- skill: git-workflow
+  prompts:
+  - 128_git_branch_strategy_generator.md
+  - 130_protected_branch_signed_release_git_gate.md
+  - 27_git_commit_branch_push_workflow.md
+- skill: hld-strict
+  prompts:
+  - 28_high_level_design_strict.md
+  - 29_low_level_design_strict.md
+- skill: lld-strict
+  prompts:
+  - 28_high_level_design_strict.md
+  - 29_low_level_design_strict.md
+- skill: mcp-permission-model
+  prompts:
+  - 142_mcp_tool_permission_model.md
+  - 143_mcp_write_action_gate.md
+  - 155_tool_permission_policy.md
+  - 84_mcp_tooling_and_agent_integration_readiness.md
+- skill: mcp-tooling-readiness
+  prompts:
+  - 142_mcp_tool_permission_model.md
+  - 143_mcp_write_action_gate.md
+  - 84_mcp_tooling_and_agent_integration_readiness.md
+- skill: multi-agent-orchestrator
+  prompts:
+  - 103_ai_context_compiler_claude_agents_cursor_llms.md
+  - 105_agents_md_generator.md
+  - 84_mcp_tooling_and_agent_integration_readiness.md
+- skill: oss-ready-packager
+  prompts:
+  - 02_project_context_glossary_memory_builder.md
+  - 08_repository_ai_ready_and_skeleton.md
+  - 09_readme_and_oss_docs_writer.md
+  - 159_prompt_glossary_catalog_maintainer.md
+  - 162_oss_ready_packager.md
+  - 22_oss_readiness_and_release_packaging.md
+- skill: oss-release-readiness
+  prompts:
+  - 02_project_context_glossary_memory_builder.md
+  - 09_readme_and_oss_docs_writer.md
+  - 127_supply_chain_release_reviewer.md
+  - 130_protected_branch_signed_release_git_gate.md
+  - 159_prompt_glossary_catalog_maintainer.md
+  - 162_oss_ready_packager.md
+- skill: patch-diff-mode
+  prompts:
+  - 144_diff_only_code_authoring.md
+  - 145_minimal_patch_mode.md
+  - 146_large_diff_reduction.md
+  - 147_patch_risk_classifier.md
+- skill: plugin-review
+  prompts:
+  - 121_security_code_review_persona.md
+  - 122_performance_code_review_persona.md
+  - 123_concurrency_code_review_persona.md
+  - 124_api_compatibility_code_review_persona.md
+  - 125_database_code_review_persona.md
+  - 126_dx_docs_code_review_persona.md
+- skill: product-docs-generator
+  prompts:
+  - 04_product_vision_and_problem_solution_analysis.md
+  - 09_readme_and_oss_docs_writer.md
+  - 126_dx_docs_code_review_persona.md
+  - 131_product_problem_solution_narrative.md
+  - 132_technical_product_one_pager.md
+  - 20_documentation_map_and_docs_content_prompt.md
+- skill: product-vision-competitor
+  prompts:
+  - 04_product_vision_and_problem_solution_analysis.md
+  - 131_product_problem_solution_narrative.md
+  - 132_technical_product_one_pager.md
+  - 80_product_vision_market_readiness.md
+- skill: prompt-audit
+  prompts:
+  - 00_claude_base_prompt.md
+  - 00_claude_base_prompt_execution_addendum.md
+  - 03_feature_inventory_and_readiness_audit.md
+  - 13_codebase_search_and_answer_prompt.md
+  - 159_prompt_glossary_catalog_maintainer.md
+  - 160_claude_tuning_playbook_prompt.md
+- skill: prompt-design
+  prompts:
+  - 00_claude_base_prompt.md
+  - 00_claude_base_prompt_execution_addendum.md
+  - 06_high_level_low_level_technical_design.md
+  - 07_architecture_design.md
+  - 13_codebase_search_and_answer_prompt.md
+  - 150_design_doc_format_converter.md
+- skill: prompt-glossary-navigator
+  prompts:
+  - 00_claude_base_prompt.md
+  - 00_claude_base_prompt_execution_addendum.md
+  - 02_project_context_glossary_memory_builder.md
+  - 13_codebase_search_and_answer_prompt.md
+  - 159_prompt_glossary_catalog_maintainer.md
+  - 160_claude_tuning_playbook_prompt.md
+- skill: prompt-test-harness
+  prompts:
+  - 00_claude_base_prompt.md
+  - 00_claude_base_prompt_execution_addendum.md
+  - 119_test_seam_refactor.md
+  - 13_codebase_search_and_answer_prompt.md
+  - 159_prompt_glossary_catalog_maintainer.md
+  - 160_claude_tuning_playbook_prompt.md
+- skill: readiness-aggregator
+  prompts:
+  - 03_feature_inventory_and_readiness_audit.md
+  - 22_oss_readiness_and_release_packaging.md
+  - 70_security_appsec_readiness.md
+  - 71_supply_chain_release_integrity_readiness.md
+  - 72_oss_governance_license_community_readiness.md
+  - 73_observability_incident_sre_readiness.md
+- skill: readiness-gates
+  prompts:
+  - 03_feature_inventory_and_readiness_audit.md
+  - 22_oss_readiness_and_release_packaging.md
+  - 70_security_appsec_readiness.md
+  - 71_supply_chain_release_integrity_readiness.md
+  - 72_oss_governance_license_community_readiness.md
+  - 73_observability_incident_sre_readiness.md
+- skill: refactor-strict
+  prompts:
+  - 10_refactoring_strategy_and_plan.md
+  - 111_safe_refactoring_inventory.md
+  - 112_strangler_fig_refactoring_plan.md
+  - 114_package_boundary_refactor.md
+  - 116_dependency_inversion_refactor.md
+  - 117_error_model_refactor.md
+- skill: repo-qa-knowledge-base
+  prompts:
+  - 08_repository_ai_ready_and_skeleton.md
+  - 108_repo_intelligence_database_builder.md
+  - 109_repo_qa_knowledge_base_builder.md
+  - 110_source_cited_repo_answerer.md
+  - 157_validation_and_reporting_gate.md
+  - 79_ai_ready_repository_context_readiness.md
+- skill: risk-execution-control
+  prompts:
+  - 00_claude_base_prompt_execution_addendum.md
+  - 11_refactoring_execution_bounded.md
+  - 147_patch_risk_classifier.md
+  - 150_global_risk_gate.md
+  - 154_execution_control.md
+  - 88_engineering_risk_register.md
+- skill: risk-gate
+  prompts:
+  - 115_dead_code_removal_gate.md
+  - 130_protected_branch_signed_release_git_gate.md
+  - 143_mcp_write_action_gate.md
+  - 147_patch_risk_classifier.md
+  - 150_global_risk_gate.md
+  - 152_api_rfc_review_gate.md
+- skill: safe-refactoring-family
+  prompts:
+  - 10_refactoring_strategy_and_plan.md
+  - 111_safe_refactoring_inventory.md
+  - 112_strangler_fig_refactoring_plan.md
+  - 11_refactoring_execution_bounded.md
+- skill: secret-aware-runtime-credentials
+  prompts:
+  - 158_secret_and_runtime_credentials.md
+  - 21_security_privacy_secrets_audit.md
+- skill: security-supply-chain
+  prompts:
+  - 121_security_code_review_persona.md
+  - 127_supply_chain_release_reviewer.md
+  - 21_security_privacy_secrets_audit.md
+  - 70_security_appsec_readiness.md
+  - 71_supply_chain_release_integrity_readiness.md

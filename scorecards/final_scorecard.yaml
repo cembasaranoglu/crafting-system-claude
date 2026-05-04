@@ -1,0 +1,10 @@
+overall:
+  status: static_release_ready_manual_runtime_validation_required
+  score: 100
+scores:
+  prompt_system_readiness: 100
+  plugin_static_readiness: 100
+evidence:
+  manual_runtime_validation: not_run_claude_cli_not_available_in_this_environment
+findings:
+  critical: []

@@ -1,0 +1,15 @@
+name: Scorecard validation example
+'on':
+  workflow_dispatch: null
+  pull_request:
+    paths:
+    - prompt-system/**
+    - plugin/**
+    - scripts/**
+jobs:
+  scorecard:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Validate YAML and package metadata
+      run: bash scripts/validate_all.sh

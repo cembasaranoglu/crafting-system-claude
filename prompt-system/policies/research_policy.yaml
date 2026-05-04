@@ -1,0 +1,26 @@
+version: 1
+research_policy:
+ source_first: true
+ required_when:
+ - user_explicitly_requests_research
+ - latest_or_current_information_needed
+ - vendor_docs_or_api_behavior_may_have_changed
+ - security_advisory_or_supply_chain_risk
+ - legal_or_compliance_fact
+ - cloud_platform_or_deployment_behavior
+ - unfamiliar_or_niche_term_affects_correctness
+ - external_standard_or_spec_referenced
+ preferred_sources:
+ - user_provided_source
+ - official_documentation
+ - standards_or_rfcs
+ - vendor_release_notes
+ - source_repository
+ - authoritative_security_advisory
+ - reputable_engineering_writeup
+ rules:
+ - researched_facts_must_be_separated_from_recommendations
+ - third_party_sources_must_not_override_user_source
+ - contradictions_with_user_source_stop_the_stage
+ - cite_sources_in_research_reports
+ - do_not_over_research_stable_local_facts

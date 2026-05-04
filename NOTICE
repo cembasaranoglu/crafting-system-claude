@@ -1,0 +1,11 @@
+Crafting Kit
+Author: Cem Basaranoglu
+License: MIT (see LICENSE)
+
+This package contains prompt, documentation, and Claude Code plugin skeleton material
+authored for use with Claude, Claude Code, Cursor, and other agentic coding tools.
+
+It is NOT an official Anthropic, Claude, Cursor, OpenAI, GitHub, or Linux Foundation
+artifact, and it is not endorsed by any of those organizations. Product names referenced
+in documentation, examples, or skill/agent descriptions belong to their respective owners
+and are used only to describe interoperability.

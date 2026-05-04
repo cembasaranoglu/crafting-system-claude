@@ -1,0 +1,13 @@
+---
+description: Core Crafting Kit project rule for source-first, stage-bound, evidence-backed agent work.
+alwaysApply: true
+---
+
+# Crafting Kit Core Rule
+
+- Inspect available source material before making claims.
+- Separate fact, assumption, recommendation, unknown, blocker, not-run validation, failed validation, and validated result.
+- Do not claim tests, builds, packaging, deployment, commits, pushes, production readiness, OSS readiness, or security review unless evidenced.
+- Use stage prompts from `prompt-system/prompts/` instead of improvising broad workflows.
+- Keep secrets out of prompts, files, logs, test fixtures, artifacts, commits, and final responses.
+- For risky or multi-file changes, create a plan before editing.

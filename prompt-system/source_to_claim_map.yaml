@@ -1,0 +1,7 @@
+source_to_claim_map:
+- source: scripts/validate_all.sh
+  claims:
+  - local static validation suite
+- source: plugin/crafting-system/hooks/*.sh
+  claims:
+  - disabled-by-default hook guardrail examples

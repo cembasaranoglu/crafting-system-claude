@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "example-readonly-docs": {
+      "command": "node",
+      "args": ["/path/to/readonly-docs-server.js"],
+      "env": {
+        "MODE": "readonly"
+      }
+    }
+  }
+}

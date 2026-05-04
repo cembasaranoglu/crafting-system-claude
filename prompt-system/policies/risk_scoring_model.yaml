@@ -1,0 +1,136 @@
+version: 1
+name: crafting-system-risk-scoring-model
+purpose: Global process and execution risk scoring policy for Claude prompt/plugin workflows.
+
+process_risk_score:
+ scale: 0-100
+ dimensions:
+ evidence_gap:
+ max: 20
+ description: Missing or weak evidence needed to proceed truthfully.
+ examples:
+ low: All required artifacts/source are present and inspected.
+ high: Source material is missing or only implied.
+ ambiguity_or_contract_gap:
+ max: 15
+ description: Unclear objective, behavior, acceptance criteria, API/schema/config/CLI/event contract, or output format.
+ domain_complexity:
+ max: 10
+ description: Complexity of domain logic, state, integration, migration, or operational constraints.
+ architecture_or_surface_impact:
+ max: 15
+ description: Impact across runtime surfaces, public contracts, repo layout, deployables, or cross-cutting concerns.
+ security_privacy_compliance_impact:
+ max: 15
+ description: Auth, authorization, PII, secrets, audit, compliance, tenant boundary, or supply-chain impact.
+ research_need_or_freshness_risk:
+ max: 10
+ description: Need for current external documentation or verification.
+ validation_gap:
+ max: 15
+ description: Inability to validate requested claims or changes.
+ levels:
+ low:
+ range: [0, 19]
+ policy: May proceed if execution risk is also acceptable.
+ guarded:
+ range: [20, 39]
+ policy: May proceed with explicit evidence and validation/reporting plan.
+ medium:
+ range: [40, 59]
+ policy: Research first or ask minimum blocking input.
+ high:
+ range: [60, 79]
+ policy: Plan only or require approval. Do not execute automatically.
+ critical:
+ range: [80, 100]
+ policy: Stop blocked. Do not continue until blockers are resolved.
+
+execution_risk_score:
+ scale: 0-100
+ note: Raw dimension total may exceed 100; normalize to min(100, raw_total).
+ dimensions:
+ file_mutation:
+ max: 10
+ description: Creates, edits, moves, or deletes files.
+ git_mutation:
+ max: 15
+ description: Changes local or remote git state.
+ external_system_mutation:
+ max: 20
+ description: Touches cloud, ticket systems, APIs, production services, queues, or shared resources.
+ destructive_or_irreversible_action:
+ max: 20
+ description: Deletes, overwrites, drops, truncates, resets, purges, force-pushes, or otherwise risks irreversible loss.
+ secret_or_credential_exposure:
+ max: 20
+ description: Reads, prints, copies, writes, commits, exports, or transmits secrets or credentials.
+ production_or_shared_environment_impact:
+ max: 20
+ description: Affects production, staging, shared databases, shared cloud resources, or user/customer data.
+ dependency_or_supply_chain_impact:
+ max: 15
+ description: Installs, upgrades, removes, vendors, tidies, audits, or rewrites dependencies/lockfiles.
+ untrusted_command_or_script_execution:
+ max: 15
+ description: Runs shell commands, scripts, remote downloads, or generated code with unclear behavior.
+ unknown_blast_radius:
+ max: 15
+ description: Impact area is unknown or unbounded.
+ rollback_unclear:
+ max: 10
+ description: No clear rollback/recovery path exists.
+ levels:
+ low:
+ range: [0, 19]
+ allowed: true
+ approval_required: false
+ guarded:
+ range: [20, 39]
+ allowed: true
+ approval_required: false
+ requirements:
+ - bounded_plan
+ - affected_paths_or_resources
+ - validation_plan
+ medium:
+ range: [40, 59]
+ allowed: conditional
+ approval_required: maybe
+ requirements:
+ - dry_run_if_possible
+ - backup_or_diff_available
+ - explicit_scope
+ high:
+ range: [60, 79]
+ allowed: false
+ approval_required: true
+ requirements:
+ - execution_plan
+ - risk_report
+ - rollback_or_recovery_plan
+ - explicit_user_approval
+ critical:
+ range: [80, 100]
+ allowed: false
+ approval_required: cannot_auto_approve
+ requirements:
+ - stop
+ - safe_redirect_or_manual_operator_action
+
+hard_stop_overrides:
+ - target_root_unknown
+ - required_source_missing
+ - execution_scope_unbounded
+ - affected_resources_unknown
+ - source_contradiction_blocks_action
+ - public_contract_change_without_acceptance_criteria
+ - secret_exposure
+ - external_or_production_mutation_without_approval
+ - database_mutation_without_approval
+ - deployment_mutation_without_approval
+ - git_remote_mutation_without_approval
+ - dependency_change_without_approval
+ - security_validation_or_auth_weakening
+ - generated_file_manual_edit_without_generator_source
+ - rollback_unknown_for_high_risk_action

@@ -1,0 +1,22 @@
+# readiness-gates
+
+- `prompt-system/prompts/70_security_appsec_readiness.md`
+- `prompt-system/prompts/71_supply_chain_release_integrity_readiness.md`
+- `prompt-system/prompts/72_oss_governance_license_community_readiness.md`
+- `prompt-system/prompts/73_observability_incident_sre_readiness.md`
+- `prompt-system/prompts/74_performance_scalability_capacity_readiness.md`
+- `prompt-system/prompts/75_documentation_dx_support_readiness.md`
+- `prompt-system/prompts/76_compliance_privacy_audit_readiness.md`
+- `prompt-system/prompts/77_api_contract_compatibility_readiness.md`
+- `prompt-system/prompts/78_data_schema_migration_quality_readiness.md`
+- `prompt-system/prompts/79_ai_ready_repository_context_readiness.md`
+- `prompt-system/prompts/80_product_vision_market_readiness.md`
+- `prompt-system/prompts/81_well_architected_cost_sustainability_readiness.md`
+- `prompt-system/prompts/82_readiness_gate_orchestrator.md`
+- `prompt-system/prompts/83_release_launch_deployment_readiness.md`
+- `prompt-system/prompts/84_mcp_tooling_and_agent_integration_readiness.md`
+- `prompt-system/prompts/85_readiness_gate_aggregator.md`
+- `prompt-system/prompts/86_release_go_no_go_board.md`
+- `prompt-system/prompts/87_executive_readiness_summary.md`
+- `prompt-system/prompts/88_engineering_risk_register.md`
+- `prompt-system/prompts/89_remediation_wave_planner.md`

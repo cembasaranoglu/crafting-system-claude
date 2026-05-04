@@ -1,0 +1,58 @@
+# AI Context
+
+## Purpose
+
+This document gives AI assistants and human maintainers a concise but source-backed map of the repository.
+
+## Current status
+
+- Status:
+- Confidence:
+- Last updated:
+- Updated by:
+
+## What this repository does
+
+## What this repository does not do
+
+## Primary users and operators
+
+## Runtime surfaces
+
+| Surface | Status | Entrypoint | Responsibility | Forbidden responsibility |
+|---|---:|---|---|---|
+
+## Key commands
+
+| Task | Command | Source | Validation status |
+|---|---|---|---|
+
+## Source map
+
+| Area | Path | Purpose | Owner/concern |
+|---|---|---|---|
+
+## Feature inventory link
+
+See `docs/FEATURE_INVENTORY.md`.
+
+## Glossary link
+
+See `docs/PROJECT_GLOSSARY.md`.
+
+## Architecture link
+
+See `docs/ARCHITECTURE.md`.
+
+## Testing link
+
+See `docs/TESTING.md`.
+
+## Known unknowns
+
+## AI assistant instructions
+
+- Search this document first.
+- Then search the referenced source paths.
+- Never answer feature status from README alone.
+- Cite source paths in answers.

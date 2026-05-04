@@ -1,0 +1,55 @@
+name: Crafting Kit
+version: 1.0.1
+author: Cem Basaranoglu
+plugin: crafting-system
+stages:
+- id: base
+  prompt: prompt-system/prompts/00_claude_base_prompt.md
+  required_for_all: true
+- id: risk_gate
+  prompt: prompt-system/prompts/150_global_risk_gate.md
+  required_for_non_trivial_work: true
+- id: intent_router
+  prompt: prompt-system/prompts/151_intent_stage_router.md
+  required_for_non_trivial_work: true
+- id: no_assumption_contract
+  prompt: prompt-system/prompts/153_assumption_ban_contract.md
+  required_for_non_trivial_work: true
+- id: source_analysis
+  prompt: prompt-system/prompts/01_source_analysis_to_artifact_pack.md
+- id: architecture
+  prompt: prompt-system/prompts/07_architecture_design.md
+- id: repository_ai_ready
+  prompt: prompt-system/prompts/08_repository_ai_ready_and_skeleton.md
+- id: code_authoring
+  prompt: prompt-system/prompts/14_bounded_code_authoring.md
+  requires:
+  - execution_control
+- id: testing
+  prompt: prompt-system/prompts/16_testing_pyramid_and_unit_tests.md
+- id: kubernetes
+  prompt: prompt-system/prompts/17_kubernetes_runtime_operations.md
+- id: execution_control
+  prompt: prompt-system/prompts/154_execution_control.md
+  required_when: tool_use_or_side_effect_in_scope
+- id: tool_permission_policy
+  prompt: prompt-system/prompts/155_tool_permission_policy.md
+  required_when: tool_use_or_side_effect_in_scope
+- id: validation_reporting
+  prompt: prompt-system/prompts/157_validation_and_reporting_gate.md
+  required_when: validation_or_status_claim_in_scope
+- id: readiness_gates
+  prompts: prompt-system/prompts/70-84_*.md
+- id: assurance
+  prompt: prompt-system/prompts/90_prompt_system_audit.md
+  required_when: prompt_system_or_plugin_review_in_scope
+- id: oss_packaging
+  prompt: prompt-system/prompts/162_oss_ready_packager.md
+rules:
+  no_fabricated_validation: true
+  source_first: true
+  no_real_secret_prompt_input: true
+  no_secret_values_in_repo_or_artifacts: true
+  execution_denied_until_classified: true
+  explicit_approval_for_destructive_or_external_mutation: true
+  plugin_namespace: crafting-system

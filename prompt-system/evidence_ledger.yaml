@@ -1,0 +1,9 @@
+evidence_entries:
+- id: EV-001
+  claim: Static package validation can be reproduced locally.
+  validation_commands:
+  - bash scripts/validate_all.sh
+- id: EV-002
+  claim: Claude Code runtime validation is not claimed in this environment.
+  validation_commands_not_run:
+  - claude --plugin-dir ./plugin/crafting-system --debug

@@ -1,0 +1,50 @@
+{
+  "name": "crafting-system",
+  "version": "1.0.3",
+  "description": "Staged, source-first engineering prompt system for Claude Code with prompt assurance, plugin review, readiness gates, safe execution boundaries, and secret-aware workflows.",
+  "author": {
+    "name": "Cem Basaranoglu"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "prompt-engineering",
+    "source-first",
+    "readiness-gates",
+    "risk-gates",
+    "safe-execution",
+    "oss-readiness"
+  ],
+  "skills": ["./skills/"],
+  "agents": [
+    "./agents/adr-rfc-editor.md",
+    "./agents/api-contract-reviewer.md",
+    "./agents/claude-tuning-reviewer.md",
+    "./agents/cursor-context-architect.md",
+    "./agents/docs-maintainer.md",
+    "./agents/documentation-dx-lead.md",
+    "./agents/evidence-auditor.md",
+    "./agents/git-release-operator.md",
+    "./agents/kubernetes-runtime-agent.md",
+    "./agents/lead-orchestrator.md",
+    "./agents/oss-governance-agent.md",
+    "./agents/oss-governance-reviewer.md",
+    "./agents/performance-reviewer.md",
+    "./agents/plugin-reviewer.md",
+    "./agents/principal-architect.md",
+    "./agents/product-analyst.md",
+    "./agents/product-market-analyst.md",
+    "./agents/prompt-architect.md",
+    "./agents/readiness-auditor.md",
+    "./agents/refactoring-architect.md",
+    "./agents/release-manager.md",
+    "./agents/repo-cartographer.md",
+    "./agents/risk-gatekeeper.md",
+    "./agents/secret-boundary-reviewer.md",
+    "./agents/security-reviewer.md",
+    "./agents/strict-code-reviewer.md",
+    "./agents/supply-chain-agent.md",
+    "./agents/test-strategy-agent.md"
+  ],
+  "commands": []
+}

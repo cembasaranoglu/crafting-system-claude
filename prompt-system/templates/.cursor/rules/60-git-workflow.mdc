@@ -1,0 +1,7 @@
+---
+description: Safe Git branch/add/commit/push workflow. Prevent accidental staging, secrets, generated artifacts, and destructive history edits.
+alwaysApply: false
+---
+
+Before git add/commit/push: inspect branch, status, diff, untracked files, and staged files. Do not stage secrets, local configs, logs, caches, assistant artifacts, or large binaries. Do not push, force-push, reset hard, clean, rebase public branches, or delete branches without explicit current authorization.
+

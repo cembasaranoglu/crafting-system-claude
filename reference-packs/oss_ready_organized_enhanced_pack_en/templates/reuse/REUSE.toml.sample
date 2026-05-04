@@ -1,0 +1,11 @@
+# Inactive sample only.
+# Do not copy this as active REUSE metadata before reviewing file ownership,
+# generated files, vendored files, examples, fixtures and third-party content.
+
+version = 1
+
+# [[annotations]]
+# path = ["docs/**"]
+# precedence = "aggregate"
+# SPDX-FileCopyrightText = "YEAR OWNER"
+# SPDX-License-Identifier = "MIT"

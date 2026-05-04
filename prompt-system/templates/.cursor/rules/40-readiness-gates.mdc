@@ -1,0 +1,7 @@
+---
+description: Apply strict readiness gate labels and evidence levels when auditing production, OSS, security, release, deployment, AI-ready, or product readiness.
+alwaysApply: false
+---
+
+When readiness is discussed, do not answer with a vague yes/no. Use gate statuses: pass, pass_with_risk, partial, fail, blocked, not_applicable, not_assessed. Use evidence levels L0-L5. Never call something production-ready, OSS-ready, secure, deployed, tested, or validated unless source or command evidence proves it.
+

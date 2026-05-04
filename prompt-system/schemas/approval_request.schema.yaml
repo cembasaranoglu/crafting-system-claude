@@ -1,0 +1,43 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: ApprovalRequest
+kind: documentation_schema
+required:
+ - action_requiring_approval
+ - execution_class
+ - why_approval_is_required
+ - exact_approval_phrase
+properties:
+ action_requiring_approval:
+ type: string
+ execution_class:
+ type: string
+ active_stage:
+ type: string
+ target_root_or_resource:
+ type: string
+ affected_paths_or_resources:
+ type: array
+ items: { type: string }
+ expected_side_effects:
+ type: array
+ items: { type: string }
+ process_risk_score:
+ type: integer
+ minimum: 0
+ maximum: 100
+ execution_risk_score:
+ type: integer
+ minimum: 0
+ maximum: 100
+ why_approval_is_required:
+ type: string
+ rollback_or_recovery_plan:
+ type: string
+ validation_plan_after_approval:
+ type: array
+ items: { type: string }
+ not_in_scope:
+ type: array
+ items: { type: string }
+ exact_approval_phrase:
+ const: "Approve this execution."

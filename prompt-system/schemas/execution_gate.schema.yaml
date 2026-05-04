@@ -1,0 +1,88 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: ExecutionGate
+kind: documentation_schema
+required:
+ - active_stage
+ - requested_action
+ - execution_class
+ - process_risk_score
+ - execution_risk_score
+ - decision
+properties:
+ active_stage:
+ type: string
+ requested_action:
+ type: string
+ execution_class:
+ enum:
+ - NO_EXECUTION
+ - READ_ONLY_EXECUTION
+ - RESEARCH_EXECUTION
+ - PLAN_EXECUTION
+ - LOCAL_DRAFT_EXECUTION
+ - LOCAL_FILE_WRITE_EXECUTION
+ - LOCAL_COMMAND_EXECUTION
+ - PACKAGE_EXECUTION
+ - GIT_LOCAL_EXECUTION
+ - GIT_REMOTE_EXECUTION
+ - DEPENDENCY_EXECUTION
+ - DATABASE_EXECUTION
+ - DEPLOYMENT_EXECUTION
+ - DESTRUCTIVE_EXECUTION
+ - SECRET_EXECUTION
+ target_root:
+ type: string
+ target_root_known:
+ enum: [yes, no]
+ scope_bounded:
+ enum: [yes, no]
+ affected_paths_or_resources:
+ type: array
+ items: { type: string }
+ source_evidence_checked:
+ type: array
+ items: { type: string }
+ missing_evidence:
+ type: array
+ items: { type: string }
+ contradictions:
+ type: array
+ items: { type: string }
+ assumptions_for_planning_only:
+ type: array
+ items: { type: string }
+ assumptions_used_for_execution:
+ type: array
+ maxItems: 0
+ process_risk_score:
+ type: integer
+ minimum: 0
+ maximum: 100
+ process_risk_level:
+ enum: [low, guarded, medium, high, critical]
+ execution_risk_score:
+ type: integer
+ minimum: 0
+ maximum: 100
+ execution_risk_level:
+ enum: [not_applicable, low, guarded, medium, high, critical]
+ research_required:
+ enum: [yes, no]
+ approval_required:
+ enum: [yes, no]
+ approval_received:
+ enum: [yes, no, not_required]
+ rollback_or_recovery_plan:
+ type: string
+ validation_plan:
+ type: array
+ items: { type: string }
+ decision:
+ enum:
+ - EXECUTE_NOW
+ - RESEARCH_FIRST
+ - ASK_MINIMUM_INPUT
+ - PLAN_ONLY
+ - REQUIRE_APPROVAL
+ - STOP_BLOCKED
+ - REFUSE_OR_SAFE_REDIRECT

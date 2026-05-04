@@ -1,0 +1,5 @@
+id: SCEN-012
+title: Core assurance scenario 012
+category: assurance
+expected_outcome: pass_or_block_with_evidence
+status: ready_for_manual_or_automated_eval

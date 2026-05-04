@@ -1,0 +1,26 @@
+numeric_prefix_collisions:
+- prefix: '00'
+  files:
+  - 00_claude_base_prompt.md
+  - 00_claude_base_prompt_execution_addendum.md
+  resolution: canonical IDs use full stem; filenames preserved
+- prefix: '150'
+  files:
+  - 150_design_doc_format_converter.md
+  - 150_global_risk_gate.md
+  resolution: canonical IDs use full stem; filenames preserved
+- prefix: '151'
+  files:
+  - 151_decision_log_adr_index.md
+  - 151_intent_stage_router.md
+  resolution: canonical IDs use full stem; filenames preserved
+- prefix: '152'
+  files:
+  - 152_api_rfc_review_gate.md
+  - 152_research_need_gate.md
+  resolution: canonical IDs use full stem; filenames preserved
+- prefix: '90'
+  files:
+  - 90_copy_ready_master_prompt_risk_execution.md
+  - 90_prompt_system_audit.md
+  resolution: canonical IDs use full stem; filenames preserved

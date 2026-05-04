@@ -1,0 +1,4 @@
+M internal/service/example.go
+?? .env.local
+?? run_output.log
+?? tmp/generated-report.md

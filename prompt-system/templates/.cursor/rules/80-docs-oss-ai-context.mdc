@@ -1,0 +1,7 @@
+---
+description: Documentation, OSS, README, Claude/Cursor/AGENTS.md context quality rules.
+alwaysApply: false
+---
+
+Docs must match repository truth. Do not document planned or mock behavior as implemented. Keep CLAUDE.md/AGENTS.md concise and durable. Long procedures belong in skills or docs. OSS docs must include license/security/contributing/release/support guidance only when appropriate and accurate.
+
