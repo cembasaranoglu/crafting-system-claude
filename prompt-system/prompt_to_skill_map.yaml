@@ -277,6 +277,15 @@ prompt_to_skill_map:
   - 21_security_privacy_secrets_audit.md
   - 70_security_appsec_readiness.md
   - 71_supply_chain_release_integrity_readiness.md
+- skill: code-authoring
+  prompts:
+  - 14_bounded_code_authoring.md
+  - 144_diff_only_code_authoring.md
+  - 145_minimal_patch_mode.md
+  - 146_large_diff_reduction.md
+  - 147_patch_risk_classifier.md
+  - 11_refactoring_execution_bounded.md
+  - 15_go_specific_addon.md
 - skill: scheduled-scoring
   prompts:
   - 163_scheduled_scoring_system.md

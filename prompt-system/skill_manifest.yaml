@@ -234,6 +234,13 @@ skills:
   description: Audit security/AppSec and supply-chain/release-integrity readiness.
   invocation_policy: auto
   status: active
+- name: code-authoring
+  path: plugin/crafting-system/skills/code-authoring/SKILL.md
+  description: Bounded code authoring and editing with source-first analysis, risk
+    and execution gates, and validation truth. Use when the user asks to write, edit,
+    refactor, or fix code in a repository.
+  invocation_policy: manual_only
+  status: active
 - name: scheduled-scoring
   path: plugin/crafting-system/skills/scheduled-scoring/SKILL.md
   description: Interpret CI report artifacts (JUnit, Sonar, Codecov, Scorecard, SAST/SCA,
