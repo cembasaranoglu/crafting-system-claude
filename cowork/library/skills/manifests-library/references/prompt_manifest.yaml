@@ -1,0 +1,1452 @@
+version: 2.0.1
+prompts:
+- id: prompt.00_claude_base_prompt
+  file: prompts/00_claude_base_prompt.md
+  title: 00 claude base prompt
+  legacy_numeric_prefix: '00'
+  stage: core
+  purpose: Prompt artifact for 00_claude_base_prompt
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies: []
+- id: prompt.00_claude_base_prompt_execution_addendum
+  file: prompts/00_claude_base_prompt_execution_addendum.md
+  title: 00 claude base prompt execution addendum
+  legacy_numeric_prefix: '00'
+  stage: core
+  purpose: Prompt artifact for 00_claude_base_prompt_execution_addendum
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies: []
+- id: prompt.01_source_analysis_to_artifact_pack
+  file: prompts/01_source_analysis_to_artifact_pack.md
+  title: 01 source analysis to artifact pack
+  legacy_numeric_prefix: '01'
+  stage: optional
+  purpose: Prompt artifact for 01_source_analysis_to_artifact_pack
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.02_project_context_glossary_memory_builder
+  file: prompts/02_project_context_glossary_memory_builder.md
+  title: 02 project context glossary memory builder
+  legacy_numeric_prefix: '02'
+  stage: readiness_release
+  purpose: Prompt artifact for 02_project_context_glossary_memory_builder
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.03_feature_inventory_and_readiness_audit
+  file: prompts/03_feature_inventory_and_readiness_audit.md
+  title: 03 feature inventory and readiness audit
+  legacy_numeric_prefix: '03'
+  stage: readiness_release
+  purpose: Prompt artifact for 03_feature_inventory_and_readiness_audit
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.04_product_vision_and_problem_solution_analysis
+  file: prompts/04_product_vision_and_problem_solution_analysis.md
+  title: 04 product vision and problem solution analysis
+  legacy_numeric_prefix: '04'
+  stage: optional
+  purpose: Prompt artifact for 04_product_vision_and_problem_solution_analysis
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.05_nontechnical_code_explainer
+  file: prompts/05_nontechnical_code_explainer.md
+  title: 05 nontechnical code explainer
+  legacy_numeric_prefix: '05'
+  stage: optional
+  purpose: Prompt artifact for 05_nontechnical_code_explainer
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.06_high_level_low_level_technical_design
+  file: prompts/06_high_level_low_level_technical_design.md
+  title: 06 high level low level technical design
+  legacy_numeric_prefix: '06'
+  stage: optional
+  purpose: Prompt artifact for 06_high_level_low_level_technical_design
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.07_architecture_design
+  file: prompts/07_architecture_design.md
+  title: 07 architecture design
+  legacy_numeric_prefix: '07'
+  stage: optional
+  purpose: Prompt artifact for 07_architecture_design
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.08_repository_ai_ready_and_skeleton
+  file: prompts/08_repository_ai_ready_and_skeleton.md
+  title: 08 repository ai ready and skeleton
+  legacy_numeric_prefix: 08
+  stage: optional
+  purpose: Prompt artifact for 08_repository_ai_ready_and_skeleton
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.09_readme_and_oss_docs_writer
+  file: prompts/09_readme_and_oss_docs_writer.md
+  title: 09 readme and oss docs writer
+  legacy_numeric_prefix: 09
+  stage: readiness_release
+  purpose: Prompt artifact for 09_readme_and_oss_docs_writer
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.100_architecture_fitness_functions
+  file: prompts/100_architecture_fitness_functions.md
+  title: 100 architecture fitness functions
+  legacy_numeric_prefix: '100'
+  stage: optional
+  purpose: Prompt artifact for 100_architecture_fitness_functions
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.101_dependency_boundary_enforcer
+  file: prompts/101_dependency_boundary_enforcer.md
+  title: 101 dependency boundary enforcer
+  legacy_numeric_prefix: '101'
+  stage: optional
+  purpose: Prompt artifact for 101_dependency_boundary_enforcer
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.102_runtime_surface_drift_detector
+  file: prompts/102_runtime_surface_drift_detector.md
+  title: 102 runtime surface drift detector
+  legacy_numeric_prefix: '102'
+  stage: optional
+  purpose: Prompt artifact for 102_runtime_surface_drift_detector
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.103_ai_context_compiler_claude_agents_cursor_llms
+  file: prompts/103_ai_context_compiler_claude_agents_cursor_llms.md
+  title: 103 ai context compiler claude agents cursor llms
+  legacy_numeric_prefix: '103'
+  stage: optional
+  purpose: Prompt artifact for 103_ai_context_compiler_claude_agents_cursor_llms
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.104_claude_md_generator
+  file: prompts/104_claude_md_generator.md
+  title: 104 claude md generator
+  legacy_numeric_prefix: '104'
+  stage: optional
+  purpose: Prompt artifact for 104_claude_md_generator
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.105_agents_md_generator
+  file: prompts/105_agents_md_generator.md
+  title: 105 agents md generator
+  legacy_numeric_prefix: '105'
+  stage: optional
+  purpose: Prompt artifact for 105_agents_md_generator
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.106_cursor_rules_generator
+  file: prompts/106_cursor_rules_generator.md
+  title: 106 cursor rules generator
+  legacy_numeric_prefix: '106'
+  stage: optional
+  purpose: Prompt artifact for 106_cursor_rules_generator
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.107_llms_txt_generator
+  file: prompts/107_llms_txt_generator.md
+  title: 107 llms txt generator
+  legacy_numeric_prefix: '107'
+  stage: optional
+  purpose: Prompt artifact for 107_llms_txt_generator
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.108_repo_intelligence_database_builder
+  file: prompts/108_repo_intelligence_database_builder.md
+  title: 108 repo intelligence database builder
+  legacy_numeric_prefix: '108'
+  stage: optional
+  purpose: Prompt artifact for 108_repo_intelligence_database_builder
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.109_repo_qa_knowledge_base_builder
+  file: prompts/109_repo_qa_knowledge_base_builder.md
+  title: 109 repo qa knowledge base builder
+  legacy_numeric_prefix: '109'
+  stage: optional
+  purpose: Prompt artifact for 109_repo_qa_knowledge_base_builder
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.10_refactoring_strategy_and_plan
+  file: prompts/10_refactoring_strategy_and_plan.md
+  title: 10 refactoring strategy and plan
+  legacy_numeric_prefix: '10'
+  stage: optional
+  purpose: Prompt artifact for 10_refactoring_strategy_and_plan
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.110_source_cited_repo_answerer
+  file: prompts/110_source_cited_repo_answerer.md
+  title: 110 source cited repo answerer
+  legacy_numeric_prefix: '110'
+  stage: optional
+  purpose: Prompt artifact for 110_source_cited_repo_answerer
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.111_safe_refactoring_inventory
+  file: prompts/111_safe_refactoring_inventory.md
+  title: 111 safe refactoring inventory
+  legacy_numeric_prefix: '111'
+  stage: optional
+  purpose: Prompt artifact for 111_safe_refactoring_inventory
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.112_strangler_fig_refactoring_plan
+  file: prompts/112_strangler_fig_refactoring_plan.md
+  title: 112 strangler fig refactoring plan
+  legacy_numeric_prefix: '112'
+  stage: optional
+  purpose: Prompt artifact for 112_strangler_fig_refactoring_plan
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.113_modular_monolith_decomposition
+  file: prompts/113_modular_monolith_decomposition.md
+  title: 113 modular monolith decomposition
+  legacy_numeric_prefix: '113'
+  stage: optional
+  purpose: Prompt artifact for 113_modular_monolith_decomposition
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.114_package_boundary_refactor
+  file: prompts/114_package_boundary_refactor.md
+  title: 114 package boundary refactor
+  legacy_numeric_prefix: '114'
+  stage: optional
+  purpose: Prompt artifact for 114_package_boundary_refactor
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.115_dead_code_removal_gate
+  file: prompts/115_dead_code_removal_gate.md
+  title: 115 dead code removal gate
+  legacy_numeric_prefix: '115'
+  stage: optional
+  purpose: Prompt artifact for 115_dead_code_removal_gate
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.116_dependency_inversion_refactor
+  file: prompts/116_dependency_inversion_refactor.md
+  title: 116 dependency inversion refactor
+  legacy_numeric_prefix: '116'
+  stage: optional
+  purpose: Prompt artifact for 116_dependency_inversion_refactor
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.117_error_model_refactor
+  file: prompts/117_error_model_refactor.md
+  title: 117 error model refactor
+  legacy_numeric_prefix: '117'
+  stage: optional
+  purpose: Prompt artifact for 117_error_model_refactor
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.118_config_model_refactor
+  file: prompts/118_config_model_refactor.md
+  title: 118 config model refactor
+  legacy_numeric_prefix: '118'
+  stage: optional
+  purpose: Prompt artifact for 118_config_model_refactor
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.119_test_seam_refactor
+  file: prompts/119_test_seam_refactor.md
+  title: 119 test seam refactor
+  legacy_numeric_prefix: '119'
+  stage: optional
+  purpose: Prompt artifact for 119_test_seam_refactor
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.11_refactoring_execution_bounded
+  file: prompts/11_refactoring_execution_bounded.md
+  title: 11 refactoring execution bounded
+  legacy_numeric_prefix: '11'
+  stage: risk_execution_control
+  purpose: Prompt artifact for 11_refactoring_execution_bounded
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.120_legacy_to_clean_architecture_migration
+  file: prompts/120_legacy_to_clean_architecture_migration.md
+  title: 120 legacy to clean architecture migration
+  legacy_numeric_prefix: '120'
+  stage: optional
+  purpose: Prompt artifact for 120_legacy_to_clean_architecture_migration
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.121_security_code_review_persona
+  file: prompts/121_security_code_review_persona.md
+  title: 121 security code review persona
+  legacy_numeric_prefix: '121'
+  stage: optional
+  purpose: Prompt artifact for 121_security_code_review_persona
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.122_performance_code_review_persona
+  file: prompts/122_performance_code_review_persona.md
+  title: 122 performance code review persona
+  legacy_numeric_prefix: '122'
+  stage: optional
+  purpose: Prompt artifact for 122_performance_code_review_persona
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.123_concurrency_code_review_persona
+  file: prompts/123_concurrency_code_review_persona.md
+  title: 123 concurrency code review persona
+  legacy_numeric_prefix: '123'
+  stage: optional
+  purpose: Prompt artifact for 123_concurrency_code_review_persona
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.124_api_compatibility_code_review_persona
+  file: prompts/124_api_compatibility_code_review_persona.md
+  title: 124 api compatibility code review persona
+  legacy_numeric_prefix: '124'
+  stage: optional
+  purpose: Prompt artifact for 124_api_compatibility_code_review_persona
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.125_database_code_review_persona
+  file: prompts/125_database_code_review_persona.md
+  title: 125 database code review persona
+  legacy_numeric_prefix: '125'
+  stage: optional
+  purpose: Prompt artifact for 125_database_code_review_persona
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.126_dx_docs_code_review_persona
+  file: prompts/126_dx_docs_code_review_persona.md
+  title: 126 dx docs code review persona
+  legacy_numeric_prefix: '126'
+  stage: optional
+  purpose: Prompt artifact for 126_dx_docs_code_review_persona
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.127_supply_chain_release_reviewer
+  file: prompts/127_supply_chain_release_reviewer.md
+  title: 127 supply chain release reviewer
+  legacy_numeric_prefix: '127'
+  stage: readiness_release
+  purpose: Prompt artifact for 127_supply_chain_release_reviewer
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.128_git_branch_strategy_generator
+  file: prompts/128_git_branch_strategy_generator.md
+  title: 128 git branch strategy generator
+  legacy_numeric_prefix: '128'
+  stage: optional
+  purpose: Prompt artifact for 128_git_branch_strategy_generator
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.129_semantic_commit_atomic_commit_planner
+  file: prompts/129_semantic_commit_atomic_commit_planner.md
+  title: 129 semantic commit atomic commit planner
+  legacy_numeric_prefix: '129'
+  stage: optional
+  purpose: Prompt artifact for 129_semantic_commit_atomic_commit_planner
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.12_competitor_analysis
+  file: prompts/12_competitor_analysis.md
+  title: 12 competitor analysis
+  legacy_numeric_prefix: '12'
+  stage: optional
+  purpose: Prompt artifact for 12_competitor_analysis
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.130_protected_branch_signed_release_git_gate
+  file: prompts/130_protected_branch_signed_release_git_gate.md
+  title: 130 protected branch signed release git gate
+  legacy_numeric_prefix: '130'
+  stage: readiness_release
+  purpose: Prompt artifact for 130_protected_branch_signed_release_git_gate
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.131_product_problem_solution_narrative
+  file: prompts/131_product_problem_solution_narrative.md
+  title: 131 product problem solution narrative
+  legacy_numeric_prefix: '131'
+  stage: optional
+  purpose: Prompt artifact for 131_product_problem_solution_narrative
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.132_technical_product_one_pager
+  file: prompts/132_technical_product_one_pager.md
+  title: 132 technical product one pager
+  legacy_numeric_prefix: '132'
+  stage: optional
+  purpose: Prompt artifact for 132_technical_product_one_pager
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.133_technical_session_30_min
+  file: prompts/133_technical_session_30_min.md
+  title: 133 technical session 30 min
+  legacy_numeric_prefix: '133'
+  stage: optional
+  purpose: Prompt artifact for 133_technical_session_30_min
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.134_demo_script_generator
+  file: prompts/134_demo_script_generator.md
+  title: 134 demo script generator
+  legacy_numeric_prefix: '134'
+  stage: optional
+  purpose: Prompt artifact for 134_demo_script_generator
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.135_executive_summary_generator
+  file: prompts/135_executive_summary_generator.md
+  title: 135 executive summary generator
+  legacy_numeric_prefix: '135'
+  stage: optional
+  purpose: Prompt artifact for 135_executive_summary_generator
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.136_non_technical_architecture_story
+  file: prompts/136_non_technical_architecture_story.md
+  title: 136 non technical architecture story
+  legacy_numeric_prefix: '136'
+  stage: optional
+  purpose: Prompt artifact for 136_non_technical_architecture_story
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.137_faq_generator
+  file: prompts/137_faq_generator.md
+  title: 137 faq generator
+  legacy_numeric_prefix: '137'
+  stage: optional
+  purpose: Prompt artifact for 137_faq_generator
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.138_sales_engineering_enablement
+  file: prompts/138_sales_engineering_enablement.md
+  title: 138 sales engineering enablement
+  legacy_numeric_prefix: '138'
+  stage: optional
+  purpose: Prompt artifact for 138_sales_engineering_enablement
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.139_compliance_evidence_collector
+  file: prompts/139_compliance_evidence_collector.md
+  title: 139 compliance evidence collector
+  legacy_numeric_prefix: '139'
+  stage: optional
+  purpose: Prompt artifact for 139_compliance_evidence_collector
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.13_codebase_search_and_answer_prompt
+  file: prompts/13_codebase_search_and_answer_prompt.md
+  title: 13 codebase search and answer prompt
+  legacy_numeric_prefix: '13'
+  stage: assurance
+  purpose: Prompt artifact for 13_codebase_search_and_answer_prompt
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.140_soc2_iso27001_control_mapper
+  file: prompts/140_soc2_iso27001_control_mapper.md
+  title: 140 soc2 iso27001 control mapper
+  legacy_numeric_prefix: '140'
+  stage: optional
+  purpose: Prompt artifact for 140_soc2_iso27001_control_mapper
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.141_gdpr_kvkk_privacy_evidence
+  file: prompts/141_gdpr_kvkk_privacy_evidence.md
+  title: 141 gdpr kvkk privacy evidence
+  legacy_numeric_prefix: '141'
+  stage: optional
+  purpose: Prompt artifact for 141_gdpr_kvkk_privacy_evidence
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.142_mcp_tool_permission_model
+  file: prompts/142_mcp_tool_permission_model.md
+  title: 142 mcp tool permission model
+  legacy_numeric_prefix: '142'
+  stage: risk_execution_control
+  purpose: Prompt artifact for 142_mcp_tool_permission_model
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.143_mcp_write_action_gate
+  file: prompts/143_mcp_write_action_gate.md
+  title: 143 mcp write action gate
+  legacy_numeric_prefix: '143'
+  stage: optional
+  purpose: Prompt artifact for 143_mcp_write_action_gate
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.144_diff_only_code_authoring
+  file: prompts/144_diff_only_code_authoring.md
+  title: 144 diff only code authoring
+  legacy_numeric_prefix: '144'
+  stage: optional
+  purpose: Prompt artifact for 144_diff_only_code_authoring
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.145_minimal_patch_mode
+  file: prompts/145_minimal_patch_mode.md
+  title: 145 minimal patch mode
+  legacy_numeric_prefix: '145'
+  stage: optional
+  purpose: Prompt artifact for 145_minimal_patch_mode
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.146_large_diff_reduction
+  file: prompts/146_large_diff_reduction.md
+  title: 146 large diff reduction
+  legacy_numeric_prefix: '146'
+  stage: optional
+  purpose: Prompt artifact for 146_large_diff_reduction
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.147_patch_risk_classifier
+  file: prompts/147_patch_risk_classifier.md
+  title: 147 patch risk classifier
+  legacy_numeric_prefix: '147'
+  stage: risk_execution_control
+  purpose: Prompt artifact for 147_patch_risk_classifier
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.148_adr_generator
+  file: prompts/148_adr_generator.md
+  title: 148 adr generator
+  legacy_numeric_prefix: '148'
+  stage: optional
+  purpose: Prompt artifact for 148_adr_generator
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.149_rfc_generator
+  file: prompts/149_rfc_generator.md
+  title: 149 rfc generator
+  legacy_numeric_prefix: '149'
+  stage: optional
+  purpose: Prompt artifact for 149_rfc_generator
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.14_bounded_code_authoring
+  file: prompts/14_bounded_code_authoring.md
+  title: 14 bounded code authoring
+  legacy_numeric_prefix: '14'
+  stage: optional
+  purpose: Prompt artifact for 14_bounded_code_authoring
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.150_design_doc_format_converter
+  file: prompts/150_design_doc_format_converter.md
+  title: 150 design doc format converter
+  legacy_numeric_prefix: '150'
+  stage: optional
+  purpose: Prompt artifact for 150_design_doc_format_converter
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.150_global_risk_gate
+  file: prompts/150_global_risk_gate.md
+  title: 150 global risk gate
+  legacy_numeric_prefix: '150'
+  stage: risk_execution_control
+  purpose: Prompt artifact for 150_global_risk_gate
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.151_decision_log_adr_index
+  file: prompts/151_decision_log_adr_index.md
+  title: 151 decision log adr index
+  legacy_numeric_prefix: '151'
+  stage: optional
+  purpose: Prompt artifact for 151_decision_log_adr_index
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.151_intent_stage_router
+  file: prompts/151_intent_stage_router.md
+  title: 151 intent stage router
+  legacy_numeric_prefix: '151'
+  stage: optional
+  purpose: Prompt artifact for 151_intent_stage_router
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.152_api_rfc_review_gate
+  file: prompts/152_api_rfc_review_gate.md
+  title: 152 api rfc review gate
+  legacy_numeric_prefix: '152'
+  stage: optional
+  purpose: Prompt artifact for 152_api_rfc_review_gate
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.152_research_need_gate
+  file: prompts/152_research_need_gate.md
+  title: 152 research need gate
+  legacy_numeric_prefix: '152'
+  stage: optional
+  purpose: Prompt artifact for 152_research_need_gate
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.153_assumption_ban_contract
+  file: prompts/153_assumption_ban_contract.md
+  title: 153 assumption ban contract
+  legacy_numeric_prefix: '153'
+  stage: optional
+  purpose: Prompt artifact for 153_assumption_ban_contract
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.154_execution_control
+  file: prompts/154_execution_control.md
+  title: 154 execution control
+  legacy_numeric_prefix: '154'
+  stage: risk_execution_control
+  purpose: Prompt artifact for 154_execution_control
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.155_tool_permission_policy
+  file: prompts/155_tool_permission_policy.md
+  title: 155 tool permission policy
+  legacy_numeric_prefix: '155'
+  stage: risk_execution_control
+  purpose: Prompt artifact for 155_tool_permission_policy
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.156_human_approval_protocol
+  file: prompts/156_human_approval_protocol.md
+  title: 156 human approval protocol
+  legacy_numeric_prefix: '156'
+  stage: risk_execution_control
+  purpose: Prompt artifact for 156_human_approval_protocol
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.157_validation_and_reporting_gate
+  file: prompts/157_validation_and_reporting_gate.md
+  title: 157 validation and reporting gate
+  legacy_numeric_prefix: '157'
+  stage: optional
+  purpose: Prompt artifact for 157_validation_and_reporting_gate
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.158_secret_and_runtime_credentials
+  file: prompts/158_secret_and_runtime_credentials.md
+  title: 158 secret and runtime credentials
+  legacy_numeric_prefix: '158'
+  stage: risk_execution_control
+  purpose: Prompt artifact for 158_secret_and_runtime_credentials
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.159_prompt_glossary_catalog_maintainer
+  file: prompts/159_prompt_glossary_catalog_maintainer.md
+  title: 159 prompt glossary catalog maintainer
+  legacy_numeric_prefix: '159'
+  stage: assurance
+  purpose: Prompt artifact for 159_prompt_glossary_catalog_maintainer
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.15_go_specific_addon
+  file: prompts/15_go_specific_addon.md
+  title: 15 go specific addon
+  legacy_numeric_prefix: '15'
+  stage: optional
+  purpose: Prompt artifact for 15_go_specific_addon
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.160_claude_tuning_playbook_prompt
+  file: prompts/160_claude_tuning_playbook_prompt.md
+  title: 160 claude tuning playbook prompt
+  legacy_numeric_prefix: '160'
+  stage: assurance
+  purpose: Prompt artifact for 160_claude_tuning_playbook_prompt
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.161_cursor_advanced_rules_prompt
+  file: prompts/161_cursor_advanced_rules_prompt.md
+  title: 161 cursor advanced rules prompt
+  legacy_numeric_prefix: '161'
+  stage: assurance
+  purpose: Prompt artifact for 161_cursor_advanced_rules_prompt
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.162_oss_ready_packager
+  file: prompts/162_oss_ready_packager.md
+  title: 162 oss ready packager
+  legacy_numeric_prefix: '162'
+  stage: readiness_release
+  purpose: Prompt artifact for 162_oss_ready_packager
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.16_testing_pyramid_and_unit_tests
+  file: prompts/16_testing_pyramid_and_unit_tests.md
+  title: 16 testing pyramid and unit tests
+  legacy_numeric_prefix: '16'
+  stage: optional
+  purpose: Prompt artifact for 16_testing_pyramid_and_unit_tests
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.17_kubernetes_runtime_operations
+  file: prompts/17_kubernetes_runtime_operations.md
+  title: 17 kubernetes runtime operations
+  legacy_numeric_prefix: '17'
+  stage: optional
+  purpose: Prompt artifact for 17_kubernetes_runtime_operations
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.18_cursor_integration_prompt
+  file: prompts/18_cursor_integration_prompt.md
+  title: 18 cursor integration prompt
+  legacy_numeric_prefix: '18'
+  stage: assurance
+  purpose: Prompt artifact for 18_cursor_integration_prompt
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.19_claude_code_context_install_prompt
+  file: prompts/19_claude_code_context_install_prompt.md
+  title: 19 claude code context install prompt
+  legacy_numeric_prefix: '19'
+  stage: assurance
+  purpose: Prompt artifact for 19_claude_code_context_install_prompt
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.20_documentation_map_and_docs_content_prompt
+  file: prompts/20_documentation_map_and_docs_content_prompt.md
+  title: 20 documentation map and docs content prompt
+  legacy_numeric_prefix: '20'
+  stage: assurance
+  purpose: Prompt artifact for 20_documentation_map_and_docs_content_prompt
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.21_security_privacy_secrets_audit
+  file: prompts/21_security_privacy_secrets_audit.md
+  title: 21 security privacy secrets audit
+  legacy_numeric_prefix: '21'
+  stage: risk_execution_control
+  purpose: Prompt artifact for 21_security_privacy_secrets_audit
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.22_oss_readiness_and_release_packaging
+  file: prompts/22_oss_readiness_and_release_packaging.md
+  title: 22 oss readiness and release packaging
+  legacy_numeric_prefix: '22'
+  stage: readiness_release
+  purpose: Prompt artifact for 22_oss_readiness_and_release_packaging
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.23_wave_planning_and_closure_prompt
+  file: prompts/23_wave_planning_and_closure_prompt.md
+  title: 23 wave planning and closure prompt
+  legacy_numeric_prefix: '23'
+  stage: assurance
+  purpose: Prompt artifact for 23_wave_planning_and_closure_prompt
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.24_api_cli_docs_contract_audit
+  file: prompts/24_api_cli_docs_contract_audit.md
+  title: 24 api cli docs contract audit
+  legacy_numeric_prefix: '24'
+  stage: optional
+  purpose: Prompt artifact for 24_api_cli_docs_contract_audit
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.25_changelog_migration_release_notes_prompt
+  file: prompts/25_changelog_migration_release_notes_prompt.md
+  title: 25 changelog migration release notes prompt
+  legacy_numeric_prefix: '25'
+  stage: assurance
+  purpose: Prompt artifact for 25_changelog_migration_release_notes_prompt
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.26_code_review_quality_gate
+  file: prompts/26_code_review_quality_gate.md
+  title: 26 code review quality gate
+  legacy_numeric_prefix: '26'
+  stage: optional
+  purpose: Prompt artifact for 26_code_review_quality_gate
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.27_git_commit_branch_push_workflow
+  file: prompts/27_git_commit_branch_push_workflow.md
+  title: 27 git commit branch push workflow
+  legacy_numeric_prefix: '27'
+  stage: optional
+  purpose: Prompt artifact for 27_git_commit_branch_push_workflow
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.28_high_level_design_strict
+  file: prompts/28_high_level_design_strict.md
+  title: 28 high level design strict
+  legacy_numeric_prefix: '28'
+  stage: optional
+  purpose: Prompt artifact for 28_high_level_design_strict
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.29_low_level_design_strict
+  file: prompts/29_low_level_design_strict.md
+  title: 29 low level design strict
+  legacy_numeric_prefix: '29'
+  stage: optional
+  purpose: Prompt artifact for 29_low_level_design_strict
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.30_code_quality_engineering_bar
+  file: prompts/30_code_quality_engineering_bar.md
+  title: 30 code quality engineering bar
+  legacy_numeric_prefix: '30'
+  stage: optional
+  purpose: Prompt artifact for 30_code_quality_engineering_bar
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.31_pull_request_review_and_merge_gate
+  file: prompts/31_pull_request_review_and_merge_gate.md
+  title: 31 pull request review and merge gate
+  legacy_numeric_prefix: '31'
+  stage: optional
+  purpose: Prompt artifact for 31_pull_request_review_and_merge_gate
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.34_claude_plugin_packager_prompt
+  file: prompts/34_claude_plugin_packager_prompt.md
+  title: 34 claude plugin packager prompt
+  legacy_numeric_prefix: '34'
+  stage: assurance
+  purpose: Prompt artifact for 34_claude_plugin_packager_prompt
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.40_full_chain_runner_prompts
+  file: prompts/40_full_chain_runner_prompts.md
+  title: 40 full chain runner prompts
+  legacy_numeric_prefix: '40'
+  stage: assurance
+  purpose: Prompt artifact for 40_full_chain_runner_prompts
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.70_security_appsec_readiness
+  file: prompts/70_security_appsec_readiness.md
+  title: 70 security appsec readiness
+  legacy_numeric_prefix: '70'
+  stage: readiness_release
+  purpose: Prompt artifact for 70_security_appsec_readiness
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.71_supply_chain_release_integrity_readiness
+  file: prompts/71_supply_chain_release_integrity_readiness.md
+  title: 71 supply chain release integrity readiness
+  legacy_numeric_prefix: '71'
+  stage: readiness_release
+  purpose: Prompt artifact for 71_supply_chain_release_integrity_readiness
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.72_oss_governance_license_community_readiness
+  file: prompts/72_oss_governance_license_community_readiness.md
+  title: 72 oss governance license community readiness
+  legacy_numeric_prefix: '72'
+  stage: readiness_release
+  purpose: Prompt artifact for 72_oss_governance_license_community_readiness
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.73_observability_incident_sre_readiness
+  file: prompts/73_observability_incident_sre_readiness.md
+  title: 73 observability incident sre readiness
+  legacy_numeric_prefix: '73'
+  stage: readiness_release
+  purpose: Prompt artifact for 73_observability_incident_sre_readiness
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.74_performance_scalability_capacity_readiness
+  file: prompts/74_performance_scalability_capacity_readiness.md
+  title: 74 performance scalability capacity readiness
+  legacy_numeric_prefix: '74'
+  stage: readiness_release
+  purpose: Prompt artifact for 74_performance_scalability_capacity_readiness
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.75_documentation_dx_support_readiness
+  file: prompts/75_documentation_dx_support_readiness.md
+  title: 75 documentation dx support readiness
+  legacy_numeric_prefix: '75'
+  stage: readiness_release
+  purpose: Prompt artifact for 75_documentation_dx_support_readiness
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.76_compliance_privacy_audit_readiness
+  file: prompts/76_compliance_privacy_audit_readiness.md
+  title: 76 compliance privacy audit readiness
+  legacy_numeric_prefix: '76'
+  stage: readiness_release
+  purpose: Prompt artifact for 76_compliance_privacy_audit_readiness
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.77_api_contract_compatibility_readiness
+  file: prompts/77_api_contract_compatibility_readiness.md
+  title: 77 api contract compatibility readiness
+  legacy_numeric_prefix: '77'
+  stage: readiness_release
+  purpose: Prompt artifact for 77_api_contract_compatibility_readiness
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.78_data_schema_migration_quality_readiness
+  file: prompts/78_data_schema_migration_quality_readiness.md
+  title: 78 data schema migration quality readiness
+  legacy_numeric_prefix: '78'
+  stage: readiness_release
+  purpose: Prompt artifact for 78_data_schema_migration_quality_readiness
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.79_ai_ready_repository_context_readiness
+  file: prompts/79_ai_ready_repository_context_readiness.md
+  title: 79 ai ready repository context readiness
+  legacy_numeric_prefix: '79'
+  stage: readiness_release
+  purpose: Prompt artifact for 79_ai_ready_repository_context_readiness
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.80_product_vision_market_readiness
+  file: prompts/80_product_vision_market_readiness.md
+  title: 80 product vision market readiness
+  legacy_numeric_prefix: '80'
+  stage: readiness_release
+  purpose: Prompt artifact for 80_product_vision_market_readiness
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.81_well_architected_cost_sustainability_readiness
+  file: prompts/81_well_architected_cost_sustainability_readiness.md
+  title: 81 well architected cost sustainability readiness
+  legacy_numeric_prefix: '81'
+  stage: readiness_release
+  purpose: Prompt artifact for 81_well_architected_cost_sustainability_readiness
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.82_readiness_gate_orchestrator
+  file: prompts/82_readiness_gate_orchestrator.md
+  title: 82 readiness gate orchestrator
+  legacy_numeric_prefix: '82'
+  stage: readiness_release
+  purpose: Prompt artifact for 82_readiness_gate_orchestrator
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.83_release_launch_deployment_readiness
+  file: prompts/83_release_launch_deployment_readiness.md
+  title: 83 release launch deployment readiness
+  legacy_numeric_prefix: '83'
+  stage: readiness_release
+  purpose: Prompt artifact for 83_release_launch_deployment_readiness
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.84_mcp_tooling_and_agent_integration_readiness
+  file: prompts/84_mcp_tooling_and_agent_integration_readiness.md
+  title: 84 mcp tooling and agent integration readiness
+  legacy_numeric_prefix: '84'
+  stage: readiness_release
+  purpose: Prompt artifact for 84_mcp_tooling_and_agent_integration_readiness
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.85_readiness_gate_aggregator
+  file: prompts/85_readiness_gate_aggregator.md
+  title: 85 readiness gate aggregator
+  legacy_numeric_prefix: '85'
+  stage: readiness_release
+  purpose: Prompt artifact for 85_readiness_gate_aggregator
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.86_release_go_no_go_board
+  file: prompts/86_release_go_no_go_board.md
+  title: 86 release go no go board
+  legacy_numeric_prefix: '86'
+  stage: readiness_release
+  purpose: Prompt artifact for 86_release_go_no_go_board
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.87_executive_readiness_summary
+  file: prompts/87_executive_readiness_summary.md
+  title: 87 executive readiness summary
+  legacy_numeric_prefix: '87'
+  stage: readiness_release
+  purpose: Prompt artifact for 87_executive_readiness_summary
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.88_engineering_risk_register
+  file: prompts/88_engineering_risk_register.md
+  title: 88 engineering risk register
+  legacy_numeric_prefix: '88'
+  stage: risk_execution_control
+  purpose: Prompt artifact for 88_engineering_risk_register
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.89_remediation_wave_planner
+  file: prompts/89_remediation_wave_planner.md
+  title: 89 remediation wave planner
+  legacy_numeric_prefix: '89'
+  stage: optional
+  purpose: Prompt artifact for 89_remediation_wave_planner
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.90_copy_ready_master_prompt_risk_execution
+  file: prompts/90_copy_ready_master_prompt_risk_execution.md
+  title: 90 copy ready master prompt risk execution
+  legacy_numeric_prefix: '90'
+  stage: assurance
+  purpose: Prompt artifact for 90_copy_ready_master_prompt_risk_execution
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.90_prompt_system_audit
+  file: prompts/90_prompt_system_audit.md
+  title: 90 prompt system audit
+  legacy_numeric_prefix: '90'
+  stage: assurance
+  purpose: Prompt artifact for 90_prompt_system_audit
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.91_prompt_conflict_detector
+  file: prompts/91_prompt_conflict_detector.md
+  title: 91 prompt conflict detector
+  legacy_numeric_prefix: '91'
+  stage: assurance
+  purpose: Prompt artifact for 91_prompt_conflict_detector
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.92_prompt_compression_without_weakening
+  file: prompts/92_prompt_compression_without_weakening.md
+  title: 92 prompt compression without weakening
+  legacy_numeric_prefix: '92'
+  stage: assurance
+  purpose: Prompt artifact for 92_prompt_compression_without_weakening
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.93_prompt_upgrade_from_run_failures
+  file: prompts/93_prompt_upgrade_from_run_failures.md
+  title: 93 prompt upgrade from run failures
+  legacy_numeric_prefix: '93'
+  stage: assurance
+  purpose: Prompt artifact for 93_prompt_upgrade_from_run_failures
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.94_evidence_ledger_traceability
+  file: prompts/94_evidence_ledger_traceability.md
+  title: 94 evidence ledger traceability
+  legacy_numeric_prefix: '94'
+  stage: optional
+  purpose: Prompt artifact for 94_evidence_ledger_traceability
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.95_source_to_claim_map
+  file: prompts/95_source_to_claim_map.md
+  title: 95 source to claim map
+  legacy_numeric_prefix: '95'
+  stage: optional
+  purpose: Prompt artifact for 95_source_to_claim_map
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.96_unsupported_claim_detector
+  file: prompts/96_unsupported_claim_detector.md
+  title: 96 unsupported claim detector
+  legacy_numeric_prefix: '96'
+  stage: optional
+  purpose: Prompt artifact for 96_unsupported_claim_detector
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.97_prompt_test_harness
+  file: prompts/97_prompt_test_harness.md
+  title: 97 prompt test harness
+  legacy_numeric_prefix: '97'
+  stage: assurance
+  purpose: Prompt artifact for 97_prompt_test_harness
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.98_prompt_regression_suite
+  file: prompts/98_prompt_regression_suite.md
+  title: 98 prompt regression suite
+  legacy_numeric_prefix: '98'
+  stage: assurance
+  purpose: Prompt artifact for 98_prompt_regression_suite
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
+- id: prompt.99_golden_output_validation
+  file: prompts/99_golden_output_validation.md
+  title: 99 golden output validation
+  legacy_numeric_prefix: '99'
+  stage: optional
+  purpose: Prompt artifact for 99_golden_output_validation
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md

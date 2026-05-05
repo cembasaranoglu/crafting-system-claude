@@ -1,0 +1,15 @@
+# Question Routing Map
+
+Use this document to answer repository questions quickly and safely.
+
+## Routing table
+
+| Question type | Start here | Then inspect | Answer should include |
+|---|---|---|---|
+| Product/problem | `README.md`, `docs/AI_CONTEXT.md` | product docs, feature inventory | problem, users, limitations |
+| Feature existence | `docs/FEATURE_INVENTORY.md` | source, tests, docs | status and evidence |
+| Runtime behavior | `docs/ARCHITECTURE.md` | entrypoints, handlers, workers | surface, flow, edge cases |
+| API/CLI/config | docs/specs | source, examples, tests | contract and drift |
+| Testing | `docs/TESTING.md` | test files, CI | what exists and what is not run |
+| Security/privacy | `SECURITY.md`, docs | configs, auth code, logs | risk and evidence |
+| Non-technical explanation | glossary, README | source if needed | plain-language summary |

@@ -11,8 +11,8 @@ agents:
   tools: Read, Grep, Glob
   mutation_policy: read_only_plan_only
   status: active
-- name: claude-tuning-reviewer
-  path: plugin/crafting-system/agents/claude-tuning-reviewer.md
+- name: prompt-tuning-reviewer
+  path: plugin/crafting-system/agents/prompt-tuning-reviewer.md
   description: Reviews Claude prompts, skills, agents, plugin manifests, context strategies,
     and eval plans.
   tools: Read, Grep, Glob

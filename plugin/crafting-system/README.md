@@ -22,7 +22,7 @@ plugin/crafting-system/
 ├── hooks/                            # Hook scripts + hooks.json.example (disabled-by-default)
 ├── policies/                         # tool_permission_policy.yaml, secret_tool_policy.yaml
 ├── scripts/                          # validate / smoke-test / package / install scripts
-├── skills/                           # 41 skills (each is a folder with SKILL.md)
+├── skills/                           # 42 skills (each is a folder with SKILL.md)
 ├── tests/                            # Test fixtures (secret-scan)
 └── README.md                         # This file
 ```
@@ -47,14 +47,14 @@ claude --plugin-dir ./plugin/crafting-system
 
 `smoke-test.sh` runs `validate-plugin.sh`, `test-hooks.sh`, `test-secret-scan.sh`, and packages the plugin to `/tmp/crafting-system-plugin.zip` (verifying the zip with `unzip -t`).
 
-## Skills (41)
+## Skills (42)
 
 Skills are auto-invocable units that Claude Code can choose to apply when a user request matches their description. Each skill is a folder under `skills/` with a `SKILL.md` containing YAML frontmatter (`name`, `description`, optional `disable-model-invocation`).
 
 ```text
 adr-rfc-writer                  ai-context-builder
 ai-context-compiler             architecture-fitness
-claude-tuning-playbook          code-quality-bar
+prompt-tuning-playbook          code-quality-bar
 code-review-quality-gate        compliance-evidence
 context-map                     cursor-rules-compiler
 docs-oss-writer                 eval-plan
@@ -71,10 +71,11 @@ prompt-glossary-navigator       prompt-test-harness
 readiness-aggregator            readiness-gates
 refactor-strict                 repo-qa-knowledge-base
 risk-execution-control          safe-refactoring-family
-secret-aware-runtime-credentials  security-supply-chain
+scheduled-scoring               secret-aware-runtime-credentials
+security-supply-chain
 ```
 
-Skills marked `disable-model-invocation: true` are intended to be triggered explicitly (by user request or another skill), not auto-selected by the model. As of `1.0.2`, that includes the gate-style skills: `git-safety-automation`, `git-workflow`, `mcp-permission-model`, `mcp-tooling-readiness`, `oss-ready-packager`, `oss-release-readiness`, `patch-diff-mode`, `plugin-review`, `readiness-aggregator`, `readiness-gates`, `risk-execution-control`, `risk-gate`, `secret-aware-runtime-credentials`.
+Skills marked `disable-model-invocation: true` are intended to be triggered explicitly (by user request or another skill), not auto-selected by the model. That includes the gate-style skills: `git-safety-automation`, `git-workflow`, `mcp-permission-model`, `mcp-tooling-readiness`, `oss-ready-packager`, `oss-release-readiness`, `patch-diff-mode`, `plugin-review`, `readiness-aggregator`, `readiness-gates`, `risk-execution-control`, `risk-gate`, `scheduled-scoring`, `secret-aware-runtime-credentials`.
 
 Example invocations from a Claude Code session:
 

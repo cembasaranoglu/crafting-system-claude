@@ -1,0 +1,46 @@
+version: 1
+hard_stops:
+ source_and_scope:
+ - target_root_unknown
+ - required_source_material_missing
+ - action_scope_unbounded
+ - affected_paths_or_resources_unknown
+ - contradictory_source_blocks_action
+ public_contracts:
+ - api_contract_change_without_acceptance_criteria
+ - schema_change_without_migration_or_compatibility_policy
+ - cli_output_change_without_contract
+ - event_protocol_change_without_consumer_impact_review
+ - config_format_change_without_migration_or_docs
+ destructive_actions:
+ - file_delete_without_approval
+ - database_drop_truncate_delete_without_approval
+ - git_reset_hard_without_approval
+ - force_push_without_approval
+ - cloud_resource_delete_without_approval
+ external_systems:
+ - production_mutation_without_approval
+ - deployment_without_approval
+ - terraform_apply_or_destroy_without_approval
+ - kubectl_apply_delete_scale_without_approval
+ - helm_upgrade_uninstall_without_approval
+ secrets:
+ - read_or_print_secret
+ - commit_secret
+ - export_secret
+ - send_secret_to_external_system
+ security_weakening:
+ - disable_auth
+ - weaken_authorization
+ - disable_tests_to_pass
+ - disable_lint_type_security_checks_to_pass
+ - remove_audit_logging
+ - bypass_review_or_ci
+ dependencies:
+ - install_dependency_without_approval
+ - upgrade_dependency_without_approval
+ - rewrite_lockfile_without_approval
+ generated_assets:
+ - manual_generated_file_edit_without_generator_source
+ validation:
+ - user_requires_validated_output_but_validation_impossible

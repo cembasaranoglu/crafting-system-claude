@@ -1,0 +1,16 @@
+---
+description: Core repository rules for AI-assisted work
+alwaysApply: true
+---
+
+# Core Project Rules
+
+- Inspect source before making claims.
+- Treat the latest user instruction as highest priority unless it conflicts with safety or repository truth.
+- Do not fabricate files, code behavior, tests, builds, deployments, or readiness.
+- Keep changes scoped to the active task.
+- Do not commit secrets, local paths, environment files, chat transcripts, scratch logs, or assistant run outputs.
+- Keep assistant artifacts outside the shipped repository unless explicitly requested.
+- Do not create wrapper directories like `source_code/`, `workspace/`, `generated_repo/`, `final/`, `output/`, or `artifacts/` inside the shipped repo.
+- Update tests/docs/config/schema/API/CLI parity when changed surfaces require it.
+- Report validation honestly with exact commands and not-run items.

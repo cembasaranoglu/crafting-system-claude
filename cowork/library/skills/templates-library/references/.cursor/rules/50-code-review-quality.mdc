@@ -1,0 +1,7 @@
+---
+description: Staff-level code review checklist for correctness, security, reliability, tests, docs, contracts, and maintainability.
+alwaysApply: false
+---
+
+For code review, inspect actual diffs and nearby code. Findings must include severity, location, evidence, impact, and required action. Do not approve with blocker or critical unresolved findings. Separate validation that ran from validation that was not run.
+

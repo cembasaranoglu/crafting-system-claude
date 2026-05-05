@@ -1,0 +1,40 @@
+# AGENTS.md
+
+This file gives AI coding agents concise, durable instructions for this repository. Keep it short. Put long procedures in docs or skills.
+
+## Project purpose
+
+- Project: `<project-name>`
+- Purpose: `<one sentence>`
+- Primary runtime surfaces: `<CLI/API/worker/library/UI>`
+- Source of truth docs: `<paths>`
+
+## Setup commands
+
+- Install dependencies: `<command>`
+- Run tests: `<command>`
+- Run lint/typecheck: `<command>`
+- Run locally: `<command>`
+
+## Coding rules
+
+- Inspect existing patterns before editing.
+- Keep changes scoped to the requested task.
+- Do not introduce secrets, local paths, generated dumps, or assistant artifacts.
+- Update tests/docs/config/schema parity for changed public behavior.
+- Do not claim validation unless commands actually ran.
+
+## Forbidden paths / caution paths
+
+- `<path>` — `<reason>`
+
+## Validation truth
+
+Always report:
+
+- commands run
+- commands not run
+- failed commands
+- assumptions
+- blockers
+

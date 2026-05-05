@@ -53,10 +53,11 @@ The repo is intentionally organized as two usable layers:
 These counts reflect the working tree at the current `VERSION`:
 
 - **133 prompts** under `prompt-system/prompts/` (see [`prompt-system/PROMPT_INDEX.md`](prompt-system/PROMPT_INDEX.md)).
-- **41 skills** under `plugin/crafting-system/skills/<skill-name>/SKILL.md`.
+- **42 skills** under `plugin/crafting-system/skills/<skill-name>/SKILL.md`.
 - **28 subagents** under `plugin/crafting-system/agents/*.md`.
-- **5 policies** (`execution_class_matrix`, `hard_stop_triggers`, `research_policy`, `risk_scoring_model`, `tool_permission_policy`) under `prompt-system/policies/`.
-- **4 schemas** (`approval_request`, `execution_gate`, `minimum_input_request`, `risk_score`) under `prompt-system/schemas/`.
+- **6 policies** (`execution_class_matrix`, `hard_stop_triggers`, `research_policy`, `risk_scoring_model`, `tool_permission_policy`, `scheduled_scoring_policy`) under `prompt-system/policies/`.
+- **5 schemas** (`approval_request`, `execution_gate`, `minimum_input_request`, `risk_score`, `scheduled_run_report`) under `prompt-system/schemas/`.
+- **`cowork/`** — Cowork-formatted plugin tree (50 skills incl. libraries, 28 subagents, all 133 prompts under `references/`).
 - **Templates** for `CLAUDE.md`, `AGENTS.md`, ADR (Nygard, Enterprise), RFC, glossary, feature inventory, AI context, and Cursor rules.
 - **Validation scripts** under `scripts/` and `plugin/crafting-system/scripts/` (see [Validation](#validation)).
 
@@ -72,6 +73,7 @@ Crafting Kit covers, end to end:
 - safe refactoring plans and bounded code-authoring prompts
 - readiness gates for security, supply chain, OSS governance, observability, performance, documentation, compliance, API contract, data/schema, AI-readiness, product-market, well-architected/cost, MCP tooling, and release/launch
 - readiness aggregation and go/no-go decisions
+- scheduled repository scoring across GitHub Actions, GitLab Pipelines, and Claude/project schedulers (CI measures, Claude interprets) — see [`docs/11_scheduled_scoring.md`](docs/11_scheduled_scoring.md)
 - prompt tuning, evaluation harnesses, regression suites, and golden output validation
 - Claude Code plugin packaging and local validation
 - Cursor rules and `AGENTS.md` generation
@@ -157,6 +159,7 @@ Then continue based on the task:
 | Readiness gates | `70`–`84`, then `85_readiness_gate_aggregator.md` |
 | Secret / runtime credentials | `158_secret_and_runtime_credentials.md` |
 | OSS packaging | `162_oss_ready_packager.md` |
+| Scheduled scoring (CI artifacts → score report) | `163_scheduled_scoring_system.md` |
 
 The full list with stages and statuses is in [`prompt-system/PROMPT_INDEX.md`](prompt-system/PROMPT_INDEX.md). The stage manifest (the source of truth for ordering) is [`stage_manifest.yaml`](stage_manifest.yaml) and [`prompt-system/stage_manifest.yaml`](prompt-system/stage_manifest.yaml).
 

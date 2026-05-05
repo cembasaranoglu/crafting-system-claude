@@ -1,0 +1,156 @@
+scheduled_scoring_policy:
+  version: 1
+  default_profile: standard
+
+  # Active scoring profile. The weights map to score buckets in
+  # prompts/163_scheduled_scoring_system.md and must sum to 100 per profile.
+  profiles:
+    standard:
+      description: Default repository profile.
+      weights:
+        code_quality: 16
+        test_quality: 16
+        security: 16
+        dependency_supply_chain: 12
+        architecture_maintainability: 12
+        ci_cd_health: 8
+        repository_hygiene: 6
+        runtime_readiness: 6
+        documentation_contracts: 5
+        ai_readiness: 3
+
+    oss_first:
+      description: Bumps OSS readiness, hygiene, and contracts. Use for public repos.
+      weights:
+        code_quality: 14
+        test_quality: 14
+        security: 14
+        dependency_supply_chain: 12
+        architecture_maintainability: 10
+        ci_cd_health: 6
+        repository_hygiene: 10
+        runtime_readiness: 4
+        documentation_contracts: 10
+        ai_readiness: 6
+
+    data_heavy:
+      description: Bumps data/migration safety and runtime readiness.
+      weights:
+        code_quality: 14
+        test_quality: 16
+        security: 14
+        dependency_supply_chain: 10
+        architecture_maintainability: 10
+        ci_cd_health: 8
+        repository_hygiene: 4
+        runtime_readiness: 12
+        documentation_contracts: 6
+        ai_readiness: 6
+
+  # Bucket → score-catalog mapping (the 21 scores from
+  # prompts/163_scheduled_scoring_system.md collapse into 10 weighted buckets).
+  bucket_membership:
+    code_quality:
+      - code_quality_score
+    test_quality:
+      - test_score
+      - coverage_score
+    security:
+      - security_score
+      - secret_hygiene_score
+    dependency_supply_chain:
+      - dependency_risk_score
+      - supply_chain_score
+    architecture_maintainability:
+      - architecture_drift_score
+      - performance_risk_score
+    ci_cd_health:
+      - ci_cd_health_score
+    repository_hygiene:
+      - repository_hygiene_score
+    runtime_readiness:
+      - runtime_readiness_score
+      - data_migration_safety_score
+    documentation_contracts:
+      - documentation_freshness_score
+      - api_contract_score
+      - config_safety_score
+    ai_readiness:
+      - ai_readiness_score
+
+  # Schedule routing matrix. Indicates which surface should run / interpret
+  # which job. Values: excellent | ok | trigger_only | interpret_only |
+  # trend_only | off | not_recommended.
+  routing_matrix:
+    lint_static_analysis:
+      github_actions: excellent
+      gitlab_pipelines: excellent
+      claude_scheduler: trigger_only
+    test_coverage:
+      github_actions: excellent
+      gitlab_pipelines: excellent
+      claude_scheduler: trigger_only
+    sast_secret_scan:
+      github_actions: excellent
+      gitlab_pipelines: excellent
+      claude_scheduler: interpret_only
+    dependency_scan:
+      github_actions: excellent
+      gitlab_pipelines: excellent
+      claude_scheduler: trend_only
+    openssf_scorecard:
+      github_actions: excellent
+      gitlab_pipelines: ok
+      claude_scheduler: interpret_only
+    architecture_drift_review:
+      github_actions: ok
+      gitlab_pipelines: ok
+      claude_scheduler: excellent
+    weekly_quality_report:
+      github_actions: ok
+      gitlab_pipelines: ok
+      claude_scheduler: excellent
+    issue_recommendation_generation:
+      github_actions: ok
+      gitlab_pipelines: ok
+      claude_scheduler: excellent
+    code_modification:
+      github_actions: off
+      gitlab_pipelines: off
+      claude_scheduler: off  # only with explicit human approval
+    production_runtime_repo_clone_or_test:
+      github_actions: not_recommended
+      gitlab_pipelines: not_recommended
+      claude_scheduler: not_recommended
+
+  # Recommended cadence per scan kind.
+  cadence:
+    daily_quick_scan:
+      includes:
+        - lint_static_analysis
+        - test_coverage
+        - dependency_scan
+        - sast_secret_scan
+    weekly_deep_scan:
+      includes:
+        - architecture_drift_review
+        - weekly_quality_report
+        - openssf_scorecard
+    monthly_readiness_scan:
+      includes:
+        - oss_readiness_score
+        - production_readiness_score
+        - supply_chain_score
+        - runtime_readiness_score
+    on_demand_manual_scan:
+      includes:
+        - all_above
+
+  # Hard rules.
+  rules:
+    no_silent_zero: true        # every score must record evidence or not_run
+    require_evidence_paths: true
+    require_trend_when_previous_run_exists: true
+    forbid_secret_values_in_report: true
+    forbid_claude_scanner_role: true
+    forbid_code_modification_in_scheduled_runs_without_human_approval: true

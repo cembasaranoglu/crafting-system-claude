@@ -1,0 +1,17 @@
+flowchart TD
+ A[Proposed Tool Call] --> B[Classify Tool Category]
+ B --> C[Map to Execution Class]
+ C --> D[Check Global Risk Gate]
+ D --> E[Check Execution Gate]
+ E --> F{Protected Path?}
+ F -- yes --> G[Deny or Require Approval]
+ F -- no --> H{Command Tool?}
+ H -- yes --> I[Command Classifier]
+ H -- no --> J[Policy Check]
+ I --> J
+ J --> K{Approval Required?}
+ K -- yes --> L[Approval Request]
+ K -- no --> M{Allowed?}
+ M -- yes --> N[Run Tool]
+ M -- no --> O[Safe Alternative / Stop]
+ N --> P[Log + Validate + Report]

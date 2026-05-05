@@ -1,0 +1,13 @@
+{
+  "summary": {
+    "generated_at_utc": "2026-05-05T04:34:46Z",
+    "total_files": 1919,
+    "prompt_files": 133,
+    "plugin_skills": 42,
+    "plugin_agents": 28,
+    "hook_scripts": 3,
+    "shell_scripts": 16,
+    "yaml_files": 80,
+    "json_files": 14
+  }
+}

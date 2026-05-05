@@ -1,11 +1,11 @@
 # Artifact Inventory
 
-- generated_at_utc: 2026-05-04T17:55:54Z
-- total_files: 494
-- prompt_files: 132
-- plugin_skills: 41
+- generated_at_utc: 2026-05-05T04:34:46Z
+- total_files: 1919
+- prompt_files: 133
+- plugin_skills: 42
 - plugin_agents: 28
 - hook_scripts: 3
 - shell_scripts: 16
-- yaml_files: 57
-- json_files: 7
+- yaml_files: 80
+- json_files: 14

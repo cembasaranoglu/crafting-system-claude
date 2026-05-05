@@ -1,0 +1,7 @@
+features:
+  - id: FEAT-001
+    name: ""
+    status: implemented | partial | documented_only | planned | not_implemented | unknown
+    evidence: []
+    gaps: []
+    confidence: high | medium | low

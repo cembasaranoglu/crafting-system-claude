@@ -911,6 +911,17 @@ prompts:
   execution_style: declared_by_prompt_or_stage_manifest
   dependencies:
   - 00_claude_base_prompt.md
+- id: prompt.163_scheduled_scoring_system
+  file: prompts/163_scheduled_scoring_system.md
+  title: 163 scheduled scoring system
+  legacy_numeric_prefix: '163'
+  stage: scheduled_scoring
+  purpose: Define the cross-surface scheduled scoring contract — score catalog, schedule routing matrix, cadence, weighted profiles, and run-report output schema.
+  status: active
+  research_mode: SOURCE_ONLY unless explicitly allowed otherwise
+  execution_style: declared_by_prompt_or_stage_manifest
+  dependencies:
+  - 00_claude_base_prompt.md
 - id: prompt.16_testing_pyramid_and_unit_tests
   file: prompts/16_testing_pyramid_and_unit_tests.md
   title: 16 testing pyramid and unit tests

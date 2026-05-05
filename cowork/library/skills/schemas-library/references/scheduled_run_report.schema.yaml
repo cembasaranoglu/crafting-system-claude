@@ -1,0 +1,189 @@
+$schema: scheduled_run_report.schema.yaml
+$id: prompt-system/schemas/scheduled_run_report.schema.yaml
+title: ScheduledRunReport
+version: 1
+description: |
+  Output contract for a single scheduled scoring run. Produced by
+  prompts/163_scheduled_scoring_system.md and validated against this schema.
+
+required:
+  - run
+  - scores
+
+properties:
+  run:
+    type: object
+    required: [source, repo, branch, commit, started_at, finished_at]
+    properties:
+      source:
+        type: string
+        enum:
+          - github_actions
+          - gitlab_pipeline
+          - project_scheduler
+          - claude_routine
+      repo:
+        type: string
+        description: "owner/name"
+      branch:
+        type: string
+      commit:
+        type: string
+        description: "Full commit SHA"
+      started_at:
+        type: string
+        format: date-time
+      finished_at:
+        type: string
+        format: date-time
+      profile:
+        type: string
+        description: "Active scoring profile from scheduled_scoring_policy.yaml"
+        default: standard
+
+  scores:
+    type: array
+    minItems: 1
+    items:
+      type: object
+      required: [name, value, confidence]
+      properties:
+        name:
+          type: string
+          description: "Must be one of the score names defined in prompt 163."
+          enum:
+            - repository_health_score
+            - code_quality_score
+            - test_score
+            - coverage_score
+            - security_score
+            - dependency_risk_score
+            - supply_chain_score
+            - ci_cd_health_score
+            - architecture_drift_score
+            - repository_hygiene_score
+            - documentation_freshness_score
+            - api_contract_score
+            - config_safety_score
+            - secret_hygiene_score
+            - runtime_readiness_score
+            - performance_risk_score
+            - data_migration_safety_score
+            - ai_readiness_score
+            - oss_readiness_score
+            - production_readiness_score
+            - trend_score
+        value:
+          type: integer
+          minimum: 0
+          maximum: 100
+        confidence:
+          type: string
+          enum: [low, medium, high]
+        evidence:
+          type: array
+          description: "Required unless not_run is set."
+          items:
+            type: object
+            properties:
+              command:
+                type: string
+                description: "Exact command run; redact secrets."
+              report_file:
+                type: string
+                description: "Path to CI artifact."
+              finding_count:
+                type: integer
+                minimum: 0
+        not_run:
+          type: array
+          items:
+            type: object
+            required: [reason]
+            properties:
+              reason:
+                type: string
+        blockers:
+          type: array
+          items:
+            type: object
+            required: [item]
+            properties:
+              item:
+                type: string
+        top_risks:
+          type: array
+          items:
+            type: object
+            required: [severity, reason, suggested_action]
+            properties:
+              severity:
+                type: string
+                enum: [critical, high, medium, low]
+              path:
+                type: string
+                description: "file:line — must not contain secret values."
+              reason:
+                type: string
+              suggested_action:
+                type: string
+
+  trend:
+    type: object
+    description: "Present only when a previous report is supplied."
+    properties:
+      previous_total_score:
+        type: integer
+        minimum: 0
+        maximum: 100
+      current_total_score:
+        type: integer
+        minimum: 0
+        maximum: 100
+      delta:
+        type: integer
+      degraded_areas:
+        type: array
+        items:
+          type: object
+          properties:
+            score: { type: string }
+            delta: { type: integer }
+      improved_areas:
+        type: array
+        items:
+          type: object
+          properties:
+            score: { type: string }
+            delta: { type: integer }
+
+  recommended_actions:
+    type: object
+    properties:
+      immediate:
+        type: array
+        items:
+          type: object
+          required: [action]
+          properties:
+            action: { type: string }
+            evidence_ref: { type: string }
+            owner: { type: string }
+      this_week:
+        type: array
+        items:
+          type: object
+          required: [action]
+          properties:
+            action: { type: string }
+            evidence_ref: { type: string }
+            owner: { type: string }
+      later:
+        type: array
+        items:
+          type: object
+          required: [action]
+          properties:
+            action: { type: string }
+            evidence_ref: { type: string }
+            owner: { type: string }

@@ -1,0 +1,14 @@
+---
+description: Testing and validation rules
+alwaysApply: false
+---
+
+# Testing and Validation
+
+- Prefer many deterministic unit tests, fewer integration tests, minimal e2e tests.
+- Add negative-path, boundary, regression, and error tests, not only happy paths.
+- Avoid hidden network/cloud/daemon dependencies in unit tests.
+- Avoid sleeps; use fake clocks, synchronization, or polling with deadlines.
+- Use contract tests for public APIs, CLIs, SDKs, configs, events, file formats, and generated artifacts.
+- Do not weaken tests, linting, type checks, or security checks to make a change pass.
+- Do not claim validation ran unless it actually ran in this session.

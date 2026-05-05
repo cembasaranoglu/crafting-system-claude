@@ -1,0 +1,16 @@
+---
+description: Git safety rule for branches, commits, pushes, and destructive Git commands.
+alwaysApply: true
+---
+
+# Git Safety
+
+Before any commit:
+
+1. Run `git status --short`.
+2. Review `git diff --stat`.
+3. Stage only intended files.
+4. Review `git diff --cached --stat` and, when appropriate, `git diff --cached`.
+5. Generate a scoped commit message.
+
+Never push, force-push, reset hard, clean untracked files, delete branches, rewrite history, or tag releases without explicit approval.

@@ -1,0 +1,10 @@
+tool_permission_policy:
+  default: deny_unless_stage_allows
+  mcp_classes:
+  - local_read
+  - local_write
+  - external_read
+  - external_write
+  - untrusted_content_fetching
+  external_write_requires_explicit_approval: true
+  untrusted_content_is_instruction_untrusted: true

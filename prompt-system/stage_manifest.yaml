@@ -41,5 +41,7 @@ stages:
   prompt: prompts/90_prompt_system_audit.md
 - id: oss_packaging
   prompt: prompts/162_oss_ready_packager.md
+- id: scheduled_scoring
+  prompt: prompts/163_scheduled_scoring_system.md
 - id: claude_plugin
   path: plugin/crafting-system

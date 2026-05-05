@@ -1,0 +1,22 @@
+flowchart TD
+ A[User Request] --> B[Intent Router]
+ B --> C[Source / Evidence Intake]
+ C --> D[Assumption Ban Gate]
+ D --> E{Research Needed?}
+ E -- yes --> F[Research Gate]
+ F --> G[Risk Scoring Gate]
+ E -- no --> G
+ G --> H[Stage Selection]
+ H --> I{Execution Required?}
+ I -- no --> J[Stage Output / Plan / Answer]
+ I -- yes --> K[Execution Planning]
+ K --> L[Execution Permission Gate]
+ L --> M{Decision}
+ M -- Execute --> N[Controlled Execution]
+ M -- Research --> F
+ M -- Ask Input --> O[Minimum Input Request]
+ M -- Approval --> P[Approval Request]
+ M -- Stop --> Q[Stop Blocked / Safe Redirect]
+ N --> R[Validation Gate]
+ R --> S[Truthful Report / Handoff]
+ J --> S

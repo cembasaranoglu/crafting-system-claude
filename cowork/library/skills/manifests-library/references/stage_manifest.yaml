@@ -1,0 +1,45 @@
+version: 2.0.1
+name: crafting_system_prompt_system
+rules:
+  load_base_first: true
+  no_fabricated_validation: true
+  readiness_outcomes_require_gate_evidence: true
+  safe_git_operations_require_current_authorization: true
+  plugin_components_at_plugin_root: true
+stages:
+- id: base
+  prompt: prompts/00_claude_base_prompt.md
+- id: risk_gate
+  prompt: prompts/150_global_risk_gate.md
+- id: intent_router
+  prompt: prompts/151_intent_stage_router.md
+- id: no_assumption_contract
+  prompt: prompts/153_assumption_ban_contract.md
+- id: source_analysis
+  prompt: prompts/01_source_analysis_to_artifact_pack.md
+- id: architecture
+  prompt: prompts/07_architecture_design.md
+- id: repository_ai_ready
+  prompt: prompts/08_repository_ai_ready_and_skeleton.md
+- id: code_authoring
+  prompt: prompts/14_bounded_code_authoring.md
+  requires:
+  - execution_control
+- id: testing
+  prompt: prompts/16_testing_pyramid_and_unit_tests.md
+- id: kubernetes
+  prompt: prompts/17_kubernetes_runtime_operations.md
+- id: execution_control
+  prompt: prompts/154_execution_control.md
+- id: tool_permission_policy
+  prompt: prompts/155_tool_permission_policy.md
+- id: validation_reporting
+  prompt: prompts/157_validation_and_reporting_gate.md
+- id: readiness_gates
+  prompts: prompts/70-84_*.md
+- id: assurance
+  prompt: prompts/90_prompt_system_audit.md
+- id: oss_packaging
+  prompt: prompts/162_oss_ready_packager.md
+- id: claude_plugin
+  path: plugin/crafting-system

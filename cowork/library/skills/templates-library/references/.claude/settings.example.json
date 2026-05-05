@@ -1,0 +1,19 @@
+{
+ "permissions": {
+ "allow": [
+ "Bash(git status:*)",
+ "Bash(git diff:*)",
+ "Bash(find . -maxdepth 4 -type f:*)",
+ "Bash(ls:*)"
+ ],
+ "deny": [
+ "Bash(rm -rf:*)",
+ "Bash(curl * | sh:*)",
+ "Bash(wget * | sh:*)"
+ ]
+ },
+ "notes": [
+ "Example only. Review before copying to .claude/settings.json.",
+ "Do not store secrets in settings files."
+ ]
+}

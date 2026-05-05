@@ -1,7 +1,7 @@
 {
   "name": "crafting-system",
-  "version": "1.0.3",
-  "description": "Staged, source-first engineering prompt system for Claude Code with prompt assurance, plugin review, readiness gates, safe execution boundaries, and secret-aware workflows.",
+  "version": "1.1.3",
+  "description": "Staged, source-first engineering prompt system for Claude Code with prompt assurance, plugin review, readiness gates, scheduled repository scoring (CI measures, Claude interprets), safe execution boundaries, and secret-aware workflows.",
   "author": {
     "name": "Cem Basaranoglu"
   },
@@ -13,13 +13,17 @@
     "readiness-gates",
     "risk-gates",
     "safe-execution",
-    "oss-readiness"
+    "oss-readiness",
+    "scheduled-scoring",
+    "ci-interpretation"
   ],
-  "skills": ["./skills/"],
+  "skills": [
+    "./skills/"
+  ],
   "agents": [
     "./agents/adr-rfc-editor.md",
     "./agents/api-contract-reviewer.md",
-    "./agents/claude-tuning-reviewer.md",
+    "./agents/prompt-tuning-reviewer.md",
     "./agents/cursor-context-architect.md",
     "./agents/docs-maintainer.md",
     "./agents/documentation-dx-lead.md",

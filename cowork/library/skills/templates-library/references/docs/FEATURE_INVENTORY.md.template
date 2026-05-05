@@ -1,0 +1,21 @@
+# Feature Inventory
+
+## Status legend
+
+- `implemented`: code path exists and is wired to a runtime surface.
+- `partial`: some code exists but surface, tests, docs, or critical behavior is incomplete.
+- `docs_only`: documentation claims it but implementation was not found.
+- `mock_only`: only fake/mock/prototype behavior was found.
+- `test_only`: tests mention it but production code was not found.
+- `not_found`: searched and did not find evidence.
+- `unknown`: source was insufficient.
+
+## Features
+
+| Feature | Status | Evidence | Runtime surface | Tests | Docs | Notes |
+|---|---:|---|---|---|---|---|
+
+## Gaps
+
+| Gap | Impact | Recommended next action |
+|---|---|---|

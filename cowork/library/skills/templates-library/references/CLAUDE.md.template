@@ -1,0 +1,58 @@
+# CLAUDE.md
+
+This file is the repository-level operating contract for Claude Code.
+
+## Project purpose
+
+<!-- Replace with 5-10 lines describing what this repository is, who uses it, and what problem it solves. -->
+
+## Source of truth
+
+Read these first:
+
+1. `README.md` — project overview and basic usage.
+2. `docs/AI_CONTEXT.md` — AI-readable repository context.
+3. `docs/PROJECT_GLOSSARY.md` — domain and implementation glossary.
+4. `docs/FEATURE_INVENTORY.md` — feature status and evidence.
+5. `docs/ARCHITECTURE.md` — runtime surfaces, components, boundaries.
+6. `docs/TESTING.md` — test strategy and validation commands.
+7. `docs/OPERATIONS.md` — runtime and operations notes, if applicable.
+
+## Repository rules for Claude
+
+- Inspect source before answering implementation questions.
+- Do not fabricate files, commands, feature status, tests, builds, deployments, or readiness.
+- Distinguish facts, assumptions, recommendations, unknowns, blockers, not-run validation, failed validation, and not-applicable items.
+- Keep assistant run outputs, scratch logs, temporary bundles, and personal AI workspace files outside the shipped repository unless explicitly requested.
+- Do not commit secrets, `.env.local`, local credentials, chat transcripts, or machine-specific paths.
+- Do not create wrapper directories such as `source_code/`, `workspace/`, `generated_repo/`, `output/`, `final/`, or `artifacts/` inside the shipped repository.
+
+## Before coding
+
+1. Read the relevant docs and source paths.
+2. Identify the bounded task.
+3. Identify impacted runtime surfaces.
+4. Identify affected tests/docs/config/schema/API/CLI surfaces.
+5. Explain the validation plan.
+6. Make scoped changes only.
+
+## Validation honesty
+
+When reporting validation, include:
+- command
+- working directory
+- exit status
+- output summary
+- what did not run
+- why it did not run
+- what remains blocked or assumed
+
+## Context refresh policy
+
+Update docs/context when:
+- features change
+- public APIs/CLI/configs change
+- runtime surfaces change
+- architecture boundaries change
+- build/test commands change
+- security or secret policy changes

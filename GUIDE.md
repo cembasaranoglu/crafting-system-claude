@@ -141,6 +141,33 @@ GOVERNANCE, CODE_OF_CONDUCT, templates, examples, docs, and release hygiene.
 Reference content: reference-packs/oss_ready_organized_enhanced_pack_en/
 ```
 
+### Run scheduled scoring (CI artifacts → score report)
+
+```text
+Boundary: CI measures, Claude interprets.
+
+Trigger scanners on GitHub Actions / GitLab Pipelines (lint, tests, coverage,
+SAST, dependency, secret, OpenSSF Scorecard, code-quality JSON).
+
+Then in Claude / Cowork:
+  Load 00, 150, 151, 153, then 163_scheduled_scoring_system.md
+  (or /crafting-system:scheduled-scoring).
+Provide:
+  - repo identity (owner/name, branch, commit)
+  - CI report artifacts
+  - (optional) previous run report for trend
+  - (optional) profile name from policies/scheduled_scoring_policy.yaml
+
+Claude returns a scheduled_run_report (per
+schemas/scheduled_run_report.schema.yaml) with:
+  - normalized scores + evidence (or not_run)
+  - weighted total (per active profile)
+  - trend vs previous run
+  - recommended_actions in immediate / this_week / later buckets
+```
+
+See [`docs/11_scheduled_scoring.md`](docs/11_scheduled_scoring.md).
+
 ### Run readiness gates
 
 ```text
@@ -200,3 +227,4 @@ The repo-level [`run_summary.md`](run_summary.md) is an example output.
 - [`docs/08_developer_workflows.md`](docs/08_developer_workflows.md)
 - [`docs/09_adr_rfc_style_guide.md`](docs/09_adr_rfc_style_guide.md)
 - [`docs/10_prompt_system_evaluation.md`](docs/10_prompt_system_evaluation.md)
+- [`docs/11_scheduled_scoring.md`](docs/11_scheduled_scoring.md)

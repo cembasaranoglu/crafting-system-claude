@@ -1,0 +1,10 @@
+Generated prompt inventory
+Generated at UTC: 2026-05-04T17:55:54Z
+Total prompt files under prompt-system/prompts: 132
+Plugin skills: 41
+Plugin agents: 28
+Hook scripts: 3
+Canonical manifest: prompt-system/prompt_manifest.yaml
+Prompt aliases: prompt-system/prompt_aliases.yaml
+Skill manifest: prompt-system/skill_manifest.yaml
+Agent manifest: prompt-system/agent_manifest.yaml

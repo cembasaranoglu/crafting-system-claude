@@ -1,0 +1,15 @@
+---
+description: Architecture and dependency boundary rules
+alwaysApply: false
+---
+
+# Architecture Boundaries
+
+- Establish current state before target state.
+- Define runtime surfaces explicitly.
+- Keep transport/framework/database concerns at the edges.
+- Keep domain logic testable without real network, cloud, credentials, or local machine assumptions.
+- Do not invent integrations, queues, databases, APIs, or deployment targets.
+- Do not broaden public API surface without explicit requirement.
+- Avoid vague packages/directories such as `utils`, `common`, `misc`, or `shared` unless ownership is explicit.
+- Preserve dependency direction and avoid cycles by design.

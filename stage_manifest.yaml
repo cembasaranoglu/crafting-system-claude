@@ -45,6 +45,8 @@ stages:
   required_when: prompt_system_or_plugin_review_in_scope
 - id: oss_packaging
   prompt: prompt-system/prompts/162_oss_ready_packager.md
+- id: scheduled_scoring
+  prompt: prompt-system/prompts/163_scheduled_scoring_system.md
 rules:
   no_fabricated_validation: true
   source_first: true

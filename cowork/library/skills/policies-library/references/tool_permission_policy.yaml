@@ -1,0 +1,96 @@
+version: 1
+default: deny_unless_classified
+path_policy:
+ allowed_roots_required: true
+ deny_parent_traversal: true
+ deny_outside_target_root_by_default: true
+ protected_patterns:
+ - "**/.env"
+ - "**/.env.*"
+ - "**/*.pem"
+ - "**/*.key"
+ - "**/*.p12"
+ - "**/*.pfx"
+ - "**/id_rsa"
+ - "**/id_ed25519"
+ - "**/.aws/**"
+ - "**/.gcp/**"
+ - "**/.azure/**"
+ - "**/.kube/config"
+ - "**/*secret*"
+ - "**/*credential*"
+ generated_file_policy: require_generator_source_or_approval
+
+tools:
+ read_file:
+ execution_class: READ_ONLY_EXECUTION
+ allowed_without_approval: true
+ constraints: [inside_allowed_scope]
+ list_files:
+ execution_class: READ_ONLY_EXECUTION
+ allowed_without_approval: true
+ search_files:
+ execution_class: READ_ONLY_EXECUTION
+ allowed_without_approval: true
+ web_search:
+ execution_class: RESEARCH_EXECUTION
+ allowed_without_approval: true
+ requires: [research_gate_passed]
+ create_file:
+ execution_class: LOCAL_FILE_WRITE_EXECUTION
+ allowed_without_approval_if:
+ - execution_risk_score_below_40
+ - target_root_known
+ - path_inside_allowed_root
+ - no_secret_content
+ edit_file:
+ execution_class: LOCAL_FILE_WRITE_EXECUTION
+ allowed_without_approval_if:
+ - execution_risk_score_below_40
+ - target_root_known
+ - path_inside_allowed_root
+ - backup_or_diff_available
+ delete_file:
+ execution_class: DESTRUCTIVE_EXECUTION
+ approval_required: true
+ run_command:
+ execution_class: LOCAL_COMMAND_EXECUTION
+ command_classifier_required: true
+ approval_required_if:
+ - mutating_command
+ - network_access
+ - package_install
+ - git_mutation
+ - destructive_command
+ - database_access
+ - deployment_access
+ package_zip:
+ execution_class: PACKAGE_EXECUTION
+ allowed_without_approval_if:
+ - source_paths_known
+ - output_path_safe
+ - no_secrets
+ git_add:
+ execution_class: GIT_LOCAL_EXECUTION
+ approval_required: true
+ git_commit:
+ execution_class: GIT_LOCAL_EXECUTION
+ approval_required: true
+ git_push:
+ execution_class: GIT_REMOTE_EXECUTION
+ approval_required: true
+ high_risk: true
+ install_dependency:
+ execution_class: DEPENDENCY_EXECUTION
+ approval_required: true
+ database_write:
+ execution_class: DATABASE_EXECUTION
+ approval_required: true
+ critical_risk: true
+ deploy:
+ execution_class: DEPLOYMENT_EXECUTION
+ approval_required: true
+ critical_risk: true
+ read_secret:
+ execution_class: SECRET_EXECUTION
+ allowed: false

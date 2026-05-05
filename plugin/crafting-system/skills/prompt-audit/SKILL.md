@@ -1,6 +1,6 @@
 ---
 name: prompt-audit
-description: Audits Claude prompts for clarity, source-first behavior, risk boundaries,
+description: Audits agent prompts for clarity, source-first behavior, risk boundaries,
   tool policy, output schemas, examples, validation honesty, and tuning readiness.
   Use when reviewing or improving a prompt.
 ---

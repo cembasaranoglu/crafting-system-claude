@@ -1,0 +1,13 @@
+---
+description: Documentation and OSS readiness rules
+alwaysApply: false
+---
+
+# Docs and OSS Rules
+
+- README must explain problem, solution, status, quick start, configuration, validation, and docs index.
+- Feature claims must match source evidence.
+- OSS docs should include license, contributing, security reporting, changelog/release policy, examples, and support boundaries when applicable.
+- Documentation must mark partial, docs-only, mock-only, not-found, and unknown features clearly.
+- Do not put personal AI workspace artifacts in repository docs.
+- Update docs when public behavior, config, commands, API/CLI, or feature status changes.

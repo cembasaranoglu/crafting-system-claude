@@ -1,0 +1,23 @@
+stateDiagram-
+ [*] --> NOT_STARTED
+ NOT_STARTED --> CLASSIFIED: classify execution class
+ CLASSIFIED --> PREFLIGHT_READY: source/scope/risk checked
+ PREFLIGHT_READY --> PERMISSION_CHECKED: tool policy checked
+ PERMISSION_CHECKED --> APPROVED_OR_ALLOWED: allowed or approved
+ PERMISSION_CHECKED --> APPROVAL_REQUIRED: high-risk action
+ PERMISSION_CHECKED --> BLOCKED: hard stop or missing input
+ APPROVAL_REQUIRED --> APPROVED_OR_ALLOWED: explicit approval received
+ APPROVAL_REQUIRED --> BLOCKED: approval rejected or absent
+ APPROVED_OR_ALLOWED --> EXECUTING: run smallest safe action
+ EXECUTING --> POST_EXECUTION_VERIFYING: action completed
+ EXECUTING --> FAILED: command/tool/action failed
+ POST_EXECUTION_VERIFYING --> VALIDATING: verify files/resources/commands
+ POST_EXECUTION_VERIFYING --> ROLLBACK_REQUIRED: unexpected side effect
+ VALIDATING --> REPORTING: validation completed or not-run recorded
+ VALIDATING --> VALIDATION_FAILED: validation failed
+ REPORTING --> DONE
+ FAILED --> REPORTING
+ VALIDATION_FAILED --> REPORTING
+ BLOCKED --> REPORTING
+ ROLLBACK_REQUIRED --> REPORTING
+ DONE --> [*]

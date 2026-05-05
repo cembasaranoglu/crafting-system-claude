@@ -1,0 +1,7 @@
+{
+  "name": "crafting-system",
+  "version": "1.1.3",
+  "description": "Source-first engineering prompt system: prompt audit, risk gate, secret-aware execution, code review, ADR/RFC, refactoring, readiness gates, scheduled repository scoring (CI measures, Claude interprets), OSS packaging, and AI-context generation.",
+  "author": { "name": "Cem Basaranoglu" },
+  "license": "MIT"
+}

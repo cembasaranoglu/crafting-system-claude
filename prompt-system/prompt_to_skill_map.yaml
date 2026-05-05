@@ -27,7 +27,7 @@ prompt_to_skill_map:
   - 100_architecture_fitness_functions.md
   - 120_legacy_to_clean_architecture_migration.md
   - 136_non_technical_architecture_story.md
-- skill: claude-tuning-playbook
+- skill: prompt-tuning-playbook
   prompts:
   - 00_claude_base_prompt.md
   - 00_claude_base_prompt_execution_addendum.md
@@ -277,3 +277,6 @@ prompt_to_skill_map:
   - 21_security_privacy_secrets_audit.md
   - 70_security_appsec_readiness.md
   - 71_supply_chain_release_integrity_readiness.md
+- skill: scheduled-scoring
+  prompts:
+  - 163_scheduled_scoring_system.md

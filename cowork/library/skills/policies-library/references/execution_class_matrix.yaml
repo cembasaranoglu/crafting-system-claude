@@ -1,0 +1,22 @@
+execution_classes:
+- id: analyze_only
+  requires_validation_report: false
+  requires_approval: false
+- id: plan_only
+  requires_validation_report: false
+  requires_approval: false
+- id: create_files
+  requires_validation_report: true
+  requires_approval: false
+- id: modify_repo
+  requires_validation_report: true
+  requires_approval: false
+- id: run_commands
+  requires_validation_report: true
+  requires_approval: false
+- id: external_write
+  requires_validation_report: true
+  requires_approval: true
+- id: release_publish
+  requires_validation_report: true
+  requires_approval: true

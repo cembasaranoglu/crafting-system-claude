@@ -1,0 +1,184 @@
+agents:
+- name: adr-rfc-editor
+  path: plugin/crafting-system/agents/adr-rfc-editor.md
+  description: Specialized Crafting Kit agent for adr rfc editor work.
+  tools: Read, Grep, Glob
+  mutation_policy: read_only_plan_only
+  status: active
+- name: api-contract-reviewer
+  path: plugin/crafting-system/agents/api-contract-reviewer.md
+  description: Specialized Crafting Kit agent for api contract reviewer work.
+  tools: Read, Grep, Glob
+  mutation_policy: read_only_plan_only
+  status: active
+- name: claude-tuning-reviewer
+  path: plugin/crafting-system/agents/claude-tuning-reviewer.md
+  description: Reviews Claude prompts, skills, agents, plugin manifests, context strategies,
+    and eval plans.
+  tools: Read, Grep, Glob
+  mutation_policy: read_only_plan_only
+  status: active
+- name: cursor-context-architect
+  path: plugin/crafting-system/agents/cursor-context-architect.md
+  description: Designs Cursor rules, AGENTS.md, and repository AI context maps from
+    source evidence.
+  tools: Read, Grep, Glob
+  mutation_policy: read_only_plan_only
+  status: active
+- name: docs-maintainer
+  path: plugin/crafting-system/agents/docs-maintainer.md
+  description: Specialized Crafting Kit agent for docs maintainer work.
+  tools: Read, Grep, Glob
+  mutation_policy: read_only_plan_only
+  status: active
+- name: documentation-dx-lead
+  path: plugin/crafting-system/agents/documentation-dx-lead.md
+  description: Produces README, docs map, DX/support docs, troubleshooting, and contribution
+    docs grounded in repo truth.
+  tools: Read, Grep, Glob
+  mutation_policy: read_only_plan_only
+  status: active
+- name: evidence-auditor
+  path: plugin/crafting-system/agents/evidence-auditor.md
+  description: Specialized Crafting Kit agent for evidence auditor work.
+  tools: Read, Grep, Glob
+  mutation_policy: read_only_plan_only
+  status: active
+- name: git-release-operator
+  path: plugin/crafting-system/agents/git-release-operator.md
+  description: Inspects git state, proposes safe branch/commit/push strategy, and
+    refuses unsafe source-control operations without authorization. Read-only/plan-only;
+    does not execute release, deploy, or git mutations.
+  tools: Read, Grep, Glob
+  mutation_policy: read_only_plan_only
+  status: active
+- name: kubernetes-runtime-agent
+  path: plugin/crafting-system/agents/kubernetes-runtime-agent.md
+  description: Specialized Crafting Kit agent for kubernetes runtime agent work.
+  tools: Read, Grep, Glob
+  mutation_policy: read_only_plan_only
+  status: active
+- name: lead-orchestrator
+  path: plugin/crafting-system/agents/lead-orchestrator.md
+  description: Specialized Crafting Kit agent for lead orchestrator work.
+  tools: Read, Grep, Glob
+  mutation_policy: read_only_plan_only
+  status: active
+- name: oss-governance-agent
+  path: plugin/crafting-system/agents/oss-governance-agent.md
+  description: Specialized Crafting Kit agent for oss governance agent work.
+  tools: Read, Grep, Glob
+  mutation_policy: read_only_plan_only
+  status: active
+- name: oss-governance-reviewer
+  path: plugin/crafting-system/agents/oss-governance-reviewer.md
+  description: Reviews OSS, license, governance, release, community, and supply-chain
+    readiness.
+  tools: Read, Grep, Glob
+  mutation_policy: read_only_plan_only
+  status: active
+- name: performance-reviewer
+  path: plugin/crafting-system/agents/performance-reviewer.md
+  description: Specialized Crafting Kit agent for performance reviewer work.
+  tools: Read, Grep, Glob
+  mutation_policy: read_only_plan_only
+  status: active
+- name: plugin-reviewer
+  path: plugin/crafting-system/agents/plugin-reviewer.md
+  description: Specialist for reviewing Claude Code plugins, skills, subagents, hooks,
+    MCP, LSP, monitors, and settings.
+  tools: Read, Grep, Glob
+  mutation_policy: read_only_plan_only
+  status: active
+- name: principal-architect
+  path: plugin/crafting-system/agents/principal-architect.md
+  description: Produces evidence-grounded HLD/LLD, architecture boundaries, tradeoffs,
+    and implementation handoffs.
+  tools: Read, Grep, Glob
+  mutation_policy: read_only_plan_only
+  status: active
+- name: product-analyst
+  path: plugin/crafting-system/agents/product-analyst.md
+  description: Specialized Crafting Kit agent for product analyst work.
+  tools: Read, Grep, Glob
+  mutation_policy: read_only_plan_only
+  status: active
+- name: product-market-analyst
+  path: plugin/crafting-system/agents/product-market-analyst.md
+  description: Analyzes product vision, market readiness, competitor comparison, positioning,
+    and user value.
+  tools: Read, Grep, Glob
+  mutation_policy: read_only_plan_only
+  status: active
+- name: prompt-architect
+  path: plugin/crafting-system/agents/prompt-architect.md
+  description: Specialist for designing Claude prompt systems, output schemas, risk
+    gates, and eval-ready prompt artifacts.
+  tools: Read, Grep, Glob
+  mutation_policy: read_only_plan_only
+  status: active
+- name: readiness-auditor
+  path: plugin/crafting-system/agents/readiness-auditor.md
+  description: Audits repository readiness gates and produces strict pass/fail/blocked
+    evidence matrix.
+  tools: Read, Grep, Glob
+  mutation_policy: read_only_plan_only
+  status: active
+- name: refactoring-architect
+  path: plugin/crafting-system/agents/refactoring-architect.md
+  description: Specialized Crafting Kit agent for refactoring architect work.
+  tools: Read, Grep, Glob
+  mutation_policy: read_only_plan_only
+  status: active
+- name: release-manager
+  path: plugin/crafting-system/agents/release-manager.md
+  description: Specialized Crafting Kit agent for release manager work. Read-only/plan-only;
+    does not execute release, deploy, or git mutations.
+  tools: Read, Grep, Glob
+  mutation_policy: read_only_plan_only
+  status: active
+- name: repo-cartographer
+  path: plugin/crafting-system/agents/repo-cartographer.md
+  description: Specialized Crafting Kit agent for repo cartographer work.
+  tools: Read, Grep, Glob
+  mutation_policy: read_only_plan_only
+  status: active
+- name: risk-gatekeeper
+  path: plugin/crafting-system/agents/risk-gatekeeper.md
+  description: Specialist for classifying task risk and deciding proceed, inspect,
+    ask, plan-only, stop, or refuse.
+  tools: Read, Grep, Glob
+  mutation_policy: read_only_plan_only
+  status: active
+- name: secret-boundary-reviewer
+  path: plugin/crafting-system/agents/secret-boundary-reviewer.md
+  description: Reviews secret handling, runtime credential boundaries, env var contracts,
+    CI secret references, and artifact hygiene.
+  tools: Read, Grep, Glob
+  mutation_policy: read_only_plan_only
+  status: active
+- name: security-reviewer
+  path: plugin/crafting-system/agents/security-reviewer.md
+  description: Specialized Crafting Kit agent for security reviewer work.
+  tools: Read, Grep, Glob
+  mutation_policy: read_only_plan_only
+  status: active
+- name: strict-code-reviewer
+  path: plugin/crafting-system/agents/strict-code-reviewer.md
+  description: Performs staff-level code review focused on correctness, security,
+    tests, contracts, and merge risk.
+  tools: Read, Grep, Glob
+  mutation_policy: read_only_plan_only
+  status: active
+- name: supply-chain-agent
+  path: plugin/crafting-system/agents/supply-chain-agent.md
+  description: Specialized Crafting Kit agent for supply chain agent work.
+  tools: Read, Grep, Glob
+  mutation_policy: read_only_plan_only
+  status: active
+- name: test-strategy-agent
+  path: plugin/crafting-system/agents/test-strategy-agent.md
+  description: Specialized Crafting Kit agent for test strategy agent work.
+  tools: Read, Grep, Glob
+  mutation_policy: read_only_plan_only
+  status: active

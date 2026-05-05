@@ -21,8 +21,8 @@ skills:
   description: Use when the user needs architecture boundary and drift checks.
   invocation_policy: auto
   status: active
-- name: claude-tuning-playbook
-  path: plugin/crafting-system/skills/claude-tuning-playbook/SKILL.md
+- name: prompt-tuning-playbook
+  path: plugin/crafting-system/skills/prompt-tuning-playbook/SKILL.md
   description: Tune Claude prompts, skills, agents, and plugin workflows using success
     criteria, evals, context discipline, and current Claude-oriented best practices.
   invocation_policy: auto
@@ -233,4 +233,13 @@ skills:
   path: plugin/crafting-system/skills/security-supply-chain/SKILL.md
   description: Audit security/AppSec and supply-chain/release-integrity readiness.
   invocation_policy: auto
+  status: active
+- name: scheduled-scoring
+  path: plugin/crafting-system/skills/scheduled-scoring/SKILL.md
+  description: Interpret CI report artifacts (JUnit, Sonar, Codecov, Scorecard, SAST/SCA,
+    secret-scan, GitLab code-quality JSON), normalize them into the 21-score catalog,
+    compute the weighted repository health score, compare against a prior report for
+    trend, and produce immediate / this-week / later recommended actions. CI measures,
+    Claude interprets.
+  invocation_policy: manual_only
   status: active

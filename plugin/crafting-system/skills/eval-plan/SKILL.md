@@ -1,6 +1,6 @@
 ---
 name: eval-plan
-description: Creates an evaluation plan for a Claude prompt, skill, or plugin workflow.
+description: Creates an evaluation plan for an agent prompt, skill, or plugin workflow.
   Use when tuning or validating prompt behavior.
 ---
 

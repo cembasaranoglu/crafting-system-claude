@@ -87,6 +87,7 @@ Generated from `prompt-system/prompt_manifest.yaml`.
 | `prompt.160_claude_tuning_playbook_prompt` | assurance | `prompts/160_claude_tuning_playbook_prompt.md` | active |
 | `prompt.161_cursor_advanced_rules_prompt` | assurance | `prompts/161_cursor_advanced_rules_prompt.md` | active |
 | `prompt.162_oss_ready_packager` | readiness_release | `prompts/162_oss_ready_packager.md` | active |
+| `prompt.163_scheduled_scoring_system` | scheduled_scoring | `prompts/163_scheduled_scoring_system.md` | active |
 | `prompt.16_testing_pyramid_and_unit_tests` | optional | `prompts/16_testing_pyramid_and_unit_tests.md` | active |
 | `prompt.17_kubernetes_runtime_operations` | optional | `prompts/17_kubernetes_runtime_operations.md` | active |
 | `prompt.18_cursor_integration_prompt` | assurance | `prompts/18_cursor_integration_prompt.md` | active |
