@@ -2,6 +2,24 @@
 
 All notable changes to Crafting Kit are recorded here. The current version is in [`VERSION`](VERSION). The format is based on [Keep a Changelog](https://keepachangelog.com/), and this project follows SemVer (see [`GOVERNANCE.md`](GOVERNANCE.md)).
 
+## 1.1.3a — 2026-05-05 (build hotfix)
+
+### Fixed — Cowork plugin showed empty skill list
+
+The previous `.plugin` zip was built in two stages, and the second stage (`cd cowork/skills && for d in */; do zip ... "$d/SKILL.md"`) added entries with the path `<skill-name>//SKILL.md` instead of `skills/<skill-name>/SKILL.md`. Cowork's auto-discovery looks for `skills/*/SKILL.md`, so it found zero skills inside the otherwise-installable plugin and the Manage page reported "no skills/agents".
+
+The build now uses a single zip pass:
+
+```bash
+cd cowork
+zip -qr /tmp/crafting-system.plugin .claude-plugin README.md skills \
+  -x '*.DS_Store' -x 'skills/*/references/*'
+```
+
+`cowork/README.md` build instructions updated to match.
+
+After uninstalling the previous `crafting-system` and uploading the rebuilt `.plugin`, Manage should list all 49 skills.
+
 ## 1.1.3 — 2026-05-05
 
 ### Fixed — Cowork plugin upload size/file-count threshold

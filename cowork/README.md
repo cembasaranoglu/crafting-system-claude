@@ -58,16 +58,23 @@ prompt-tuning-playbook
 ```bash
 cd cowork
 
-# Lean .plugin (42 skills, no agents, no references) — accepted by Cowork
+# Lean .plugin (49 skills, no agents, no references) — accepted by Cowork
 rm -f /tmp/crafting-system.plugin
-zip -qr /tmp/crafting-system.plugin .claude-plugin README.md -x '*.DS_Store'
-( cd skills && for d in */; do zip -q /tmp/crafting-system.plugin "$d/SKILL.md"; done )
+zip -qr /tmp/crafting-system.plugin .claude-plugin README.md skills \
+  -x '*.DS_Store' -x 'skills/*/references/*'
 
 # Individual library skills
 for d in library/skills/*/; do
     name=$(basename "$d")
     ( cd library/skills && zip -qr "/tmp/$name.skill" "$name" -x '*.DS_Store' )
     mv "/tmp/$name.skill" "library/.skill-packages/"
+done
+
+# Individual extras skills
+for d in extras/skills/*/; do
+    name=$(basename "$d")
+    ( cd extras/skills && zip -qr "/tmp/$name.skill" "$name" -x '*.DS_Store' )
+    mv "/tmp/$name.skill" "extras/.skill-packages/"
 done
 ```
 
