@@ -6,14 +6,12 @@ skills:
   status: active
 - name: ai-context-builder
   path: plugin/crafting-system/skills/ai-context-builder/SKILL.md
-  description: Build Claude/Cursor/AGENTS.md AI-ready repository context, glossary,
-    feature inventory, and routing artifacts.
+  description: Build Claude/Cursor/AGENTS.md AI-ready repository context, glossary, feature inventory, and routing artifacts.
   invocation_policy: auto
   status: active
 - name: ai-context-compiler
   path: plugin/crafting-system/skills/ai-context-compiler/SKILL.md
-  description: Use when the user needs CLAUDE.md AGENTS.md Cursor rules and llms.txt
-    generation.
+  description: Use when the user needs CLAUDE.md AGENTS.md Cursor rules and llms.txt generation.
   invocation_policy: auto
   status: active
 - name: architecture-fitness
@@ -23,20 +21,17 @@ skills:
   status: active
 - name: prompt-tuning-playbook
   path: plugin/crafting-system/skills/prompt-tuning-playbook/SKILL.md
-  description: Tune Claude prompts, skills, agents, and plugin workflows using success
-    criteria, evals, context discipline, and current Claude-oriented best practices.
+  description: Tune Claude prompts, skills, agents, and plugin workflows using success criteria, evals, context discipline, and current Claude-oriented best practices.
   invocation_policy: auto
   status: active
 - name: code-quality-bar
   path: plugin/crafting-system/skills/code-quality-bar/SKILL.md
-  description: Establish or audit a universal code quality engineering bar for a repository
-    or code slice.
+  description: Establish or audit a universal code quality engineering bar for a repository or code slice.
   invocation_policy: auto
   status: active
 - name: code-review-quality-gate
   path: plugin/crafting-system/skills/code-review-quality-gate/SKILL.md
-  description: Review a diff, PR, branch, or code slice using a strict code quality
-    and merge gate checklist.
+  description: Review a diff, PR, branch, or code slice using a strict code quality and merge gate checklist.
   invocation_policy: auto
   status: active
 - name: compliance-evidence
@@ -46,27 +41,22 @@ skills:
   status: active
 - name: context-map
   path: plugin/crafting-system/skills/context-map/SKILL.md
-  description: Maps instructions and knowledge into CLAUDE.md, skills, plugin files,
-    subagents, MCP, hooks, prompt cache, or per-request context. Use when organizing
-    Claude context.
+  description: Maps instructions and knowledge into CLAUDE.md, skills, plugin files, subagents, MCP, hooks, prompt cache, or per-request context. Use when organizing Claude context.
   invocation_policy: auto
   status: active
 - name: cursor-rules-compiler
   path: plugin/crafting-system/skills/cursor-rules-compiler/SKILL.md
-  description: Generate or review AGENTS.md and `.cursor/rules/*.mdc` for a repository
-    using source evidence, scoped rules, plan-mode guidance, and safety guardrails.
+  description: Generate or review AGENTS.md and `.cursor/rules/*.mdc` for a repository using source evidence, scoped rules, plan-mode guidance, and safety guardrails.
   invocation_policy: auto
   status: active
 - name: docs-oss-writer
   path: plugin/crafting-system/skills/docs-oss-writer/SKILL.md
-  description: Generate accurate README, OSS docs, docs map, support docs, and documentation
-    readiness artifacts.
+  description: Generate accurate README, OSS docs, docs map, support docs, and documentation readiness artifacts.
   invocation_policy: auto
   status: active
 - name: eval-plan
   path: plugin/crafting-system/skills/eval-plan/SKILL.md
-  description: Creates an evaluation plan for a Claude prompt, skill, or plugin workflow.
-    Use when tuning or validating prompt behavior.
+  description: Creates an evaluation plan for a Claude prompt, skill, or plugin workflow. Use when tuning or validating prompt behavior.
   invocation_policy: auto
   status: active
 - name: evidence-ledger
@@ -81,8 +71,7 @@ skills:
   status: active
 - name: feature-inventory
   path: plugin/crafting-system/skills/feature-inventory/SKILL.md
-  description: Analyze a repository and produce an evidence-backed feature inventory
-    with implemented/partial/docs-only/not-implemented status.
+  description: Analyze a repository and produce an evidence-backed feature inventory with implemented/partial/docs-only/not-implemented status.
   invocation_policy: auto
   status: active
 - name: git-safety-automation
@@ -92,20 +81,17 @@ skills:
   status: active
 - name: git-workflow
   path: plugin/crafting-system/skills/git-workflow/SKILL.md
-  description: Safely inspect Git status, propose branch strategy, generate commit
-    messages, stage, commit, and push only when explicitly authorized.
+  description: Safely inspect Git status, propose branch strategy, generate commit messages, stage, commit, and push only when explicitly authorized.
   invocation_policy: manual_only
   status: active
 - name: hld-strict
   path: plugin/crafting-system/skills/hld-strict/SKILL.md
-  description: Create a strict high-level design in accepted architecture formats
-    with Mermaid diagrams and evidence-grounded assumptions.
+  description: Create a strict high-level design in accepted architecture formats with Mermaid diagrams and evidence-grounded assumptions.
   invocation_policy: auto
   status: active
 - name: lld-strict
   path: plugin/crafting-system/skills/lld-strict/SKILL.md
-  description: Create a strict low-level design with module contracts, behavior matrix,
-    path plan, and coding handoff.
+  description: Create a strict low-level design with module contracts, behavior matrix, path plan, and coding handoff.
   invocation_policy: auto
   status: active
 - name: mcp-permission-model
@@ -115,8 +101,7 @@ skills:
   status: active
 - name: mcp-tooling-readiness
   path: plugin/crafting-system/skills/mcp-tooling-readiness/SKILL.md
-  description: Review MCP/tooling/agent integration readiness and prompt-injection
-    risk.
+  description: Review MCP/tooling/agent integration readiness and prompt-injection risk.
   invocation_policy: manual_only
   status: active
 - name: multi-agent-orchestrator
@@ -126,8 +111,7 @@ skills:
   status: active
 - name: oss-ready-packager
   path: plugin/crafting-system/skills/oss-ready-packager/SKILL.md
-  description: Prepare or review OSS-facing package files, community health files,
-    release hygiene, security policy, support docs, and package validation truth.
+  description: Prepare or review OSS-facing package files, community health files, release hygiene, security policy, support docs, and package validation truth.
   invocation_policy: manual_only
   status: active
 - name: oss-release-readiness
@@ -142,9 +126,8 @@ skills:
   status: active
 - name: plugin-review
   path: plugin/crafting-system/skills/plugin-review/SKILL.md
-  description: Reviews Claude Code plugins for manifest structure, skill design, agents,
-    hooks, MCP, LSP, monitors, permissions, security, documentation, and packaging
-    readiness. Use when reviewing a plugin or plugin plan.
+  description: Reviews Claude Code plugins for manifest structure, skill design, agents, hooks, MCP, LSP, monitors, permissions, security, documentation, and packaging readiness. Use when reviewing a plugin
+    or plugin plan.
   invocation_policy: manual_only
   status: active
 - name: product-docs-generator
@@ -154,28 +137,23 @@ skills:
   status: active
 - name: product-vision-competitor
   path: plugin/crafting-system/skills/product-vision-competitor/SKILL.md
-  description: Analyze product vision, positioning, problem/solution fit, and competitor
-    comparison from source evidence and allowed research.
+  description: Analyze product vision, positioning, problem/solution fit, and competitor comparison from source evidence and allowed research.
   invocation_policy: auto
   status: active
 - name: prompt-audit
   path: plugin/crafting-system/skills/prompt-audit/SKILL.md
-  description: Audits Claude prompts for clarity, source-first behavior, risk boundaries,
-    tool policy, output schemas, examples, validation honesty, and tuning readiness.
-    Use when reviewing or improving a prompt.
+  description: Audits Claude prompts for clarity, source-first behavior, risk boundaries, tool policy, output schemas, examples, validation honesty, and tuning readiness. Use when reviewing or improving
+    a prompt.
   invocation_policy: auto
   status: active
 - name: prompt-design
   path: plugin/crafting-system/skills/prompt-design/SKILL.md
-  description: Designs a new Claude prompt system with operating contract, modes,
-    risk gate, tool policy, output schemas, examples, and eval plan. Use when creating
-    a reusable prompt.
+  description: Designs a new Claude prompt system with operating contract, modes, risk gate, tool policy, output schemas, examples, and eval plan. Use when creating a reusable prompt.
   invocation_policy: auto
   status: active
 - name: prompt-glossary-navigator
   path: plugin/crafting-system/skills/prompt-glossary-navigator/SKILL.md
-  description: Explain what each Crafting Kit prompt does, which prompts depend on
-    it, and which order is strict, recommended, optional, or conditional.
+  description: Explain what each Crafting Kit prompt does, which prompts depend on it, and which order is strict, recommended, optional, or conditional.
   invocation_policy: auto
   status: active
 - name: prompt-test-harness
@@ -190,14 +168,12 @@ skills:
   status: active
 - name: readiness-gates
   path: plugin/crafting-system/skills/readiness-gates/SKILL.md
-  description: Run the staged readiness gate orchestrator for production, OSS, security,
-    release, deployment, AI-ready, and product readiness.
+  description: Run the staged readiness gate orchestrator for production, OSS, security, release, deployment, AI-ready, and product readiness.
   invocation_policy: manual_only
   status: active
 - name: refactor-strict
   path: plugin/crafting-system/skills/refactor-strict/SKILL.md
-  description: Plan a strict refactor from source evidence, then optionally execute
-    one bounded refactor slice only when authorized.
+  description: Plan a strict refactor from source evidence, then optionally execute one bounded refactor slice only when authorized.
   invocation_policy: auto
   status: active
 - name: repo-qa-knowledge-base
@@ -207,14 +183,12 @@ skills:
   status: active
 - name: risk-execution-control
   path: plugin/crafting-system/skills/risk-execution-control/SKILL.md
-  description: Route requests through risk, intent, no-assumption, execution, tool
-    permission, approval, and validation gates before side-effect actions.
+  description: Route requests through risk, intent, no-assumption, execution, tool permission, approval, and validation gates before side-effect actions.
   invocation_policy: manual_only
   status: active
 - name: risk-gate
   path: plugin/crafting-system/skills/risk-gate/SKILL.md
-  description: Runs a risk gate for Claude actions. Use when deciding whether to proceed,
-    inspect sources, ask minimum input, plan only, stop, or refuse.
+  description: Runs a risk gate for Claude actions. Use when deciding whether to proceed, inspect sources, ask minimum input, plan only, stop, or refuse.
   invocation_policy: manual_only
   status: active
 - name: safe-refactoring-family
@@ -224,9 +198,7 @@ skills:
   status: active
 - name: secret-aware-runtime-credentials
   path: plugin/crafting-system/skills/secret-aware-runtime-credentials/SKILL.md
-  description: Classify and handle secrets, credentials, runtime config, env vars,
-    CI secrets, Kubernetes secret references, and redaction without exposing real
-    secret values.
+  description: Classify and handle secrets, credentials, runtime config, env vars, CI secrets, Kubernetes secret references, and redaction without exposing real secret values.
   invocation_policy: manual_only
   status: active
 - name: security-supply-chain
@@ -236,17 +208,140 @@ skills:
   status: active
 - name: code-authoring
   path: plugin/crafting-system/skills/code-authoring/SKILL.md
-  description: Bounded code authoring and editing with source-first analysis, risk
-    and execution gates, and validation truth. Use when the user asks to write, edit,
-    refactor, or fix code in a repository.
+  description: Bounded code authoring and editing with source-first analysis, risk and execution gates, and validation truth. Use when the user asks to write, edit, refactor, or fix code in a repository.
   invocation_policy: manual_only
   status: active
 - name: scheduled-scoring
   path: plugin/crafting-system/skills/scheduled-scoring/SKILL.md
-  description: Interpret CI report artifacts (JUnit, Sonar, Codecov, Scorecard, SAST/SCA,
-    secret-scan, GitLab code-quality JSON), normalize them into the 21-score catalog,
-    compute the weighted repository health score, compare against a prior report for
-    trend, and produce immediate / this-week / later recommended actions. CI measures,
-    Claude interprets.
+  description: Interpret CI report artifacts (JUnit, Sonar, Codecov, Scorecard, SAST/SCA, secret-scan, GitLab code-quality JSON), normalize them into the 21-score catalog, compute the weighted repository
+    health score, compare against a prior report for trend, and produce immediate / this-week / later recommended actions. CI measures, Claude interprets.
   invocation_policy: manual_only
+  status: active
+- name: source-analysis-pack
+  path: plugin/crafting-system/skills/source-analysis-pack/SKILL.md
+  description: Inspect a repository and produce a source-first artifact pack covering languages, frameworks, conventions, runtime surfaces, build pipeline, tests, and configs. Use when starting work on
+    an unfamiliar repository.
+  invocation_policy: auto
+  status: active
+- name: competitor-analysis
+  path: plugin/crafting-system/skills/competitor-analysis/SKILL.md
+  description: Compare the project to competitors using source evidence and allowed research. Use when preparing positioning, market readiness, or product narrative.
+  invocation_policy: auto
+  status: active
+- name: codebase-search-and-answer
+  path: plugin/crafting-system/skills/codebase-search-and-answer/SKILL.md
+  description: Answer specific repository questions with cited paths and excerpts. Use when the user asks where something is, how it works, or what depends on it.
+  invocation_policy: auto
+  status: active
+- name: testing-pyramid
+  path: plugin/crafting-system/skills/testing-pyramid/SKILL.md
+  description: Design a testing strategy and pyramid for a repository or change. Use when planning unit, component, contract, integration, e2e, smoke, fuzz, or benchmark coverage.
+  invocation_policy: auto
+  status: active
+- name: k8s-runtime-ops
+  path: plugin/crafting-system/skills/k8s-runtime-ops/SKILL.md
+  description: Review or design Kubernetes runtime operations including health, readiness, graceful shutdown, resource sizing, security context, and rollout. Use when working with Dockerfile, Kubernetes
+    manifests, Helm, or rollout strategy.
+  invocation_policy: auto
+  status: active
+- name: api-cli-docs-audit
+  path: plugin/crafting-system/skills/api-cli-docs-audit/SKILL.md
+  description: Audit API, CLI, OpenAPI, GraphQL, and CLI help against documented contracts and example outputs. Use when validating contract drift or releasing public surfaces.
+  invocation_policy: auto
+  status: active
+- name: release-notes-writer
+  path: plugin/crafting-system/skills/release-notes-writer/SKILL.md
+  description: Generate changelog entries, migration notes, and release notes from real diffs and commits. Use when preparing a release or tagging a version.
+  invocation_policy: auto
+  status: active
+- name: pr-merge-gate
+  path: plugin/crafting-system/skills/pr-merge-gate/SKILL.md
+  description: Apply a strict pull-request review and merge gate using diffs, tests, and validation truth. Use when deciding whether a branch is ready to merge.
+  invocation_policy: auto
+  status: active
+- name: plugin-packager
+  path: plugin/crafting-system/skills/plugin-packager/SKILL.md
+  description: Package, validate, and ship a Claude Code or Cowork plugin. Use when building, packaging, or publishing a plugin manifest, skills, agents, hooks, or marketplace entry.
+  invocation_policy: auto
+  status: active
+- name: observability-readiness
+  path: plugin/crafting-system/skills/observability-readiness/SKILL.md
+  description: Audit logging, metrics, tracing, alerting, and incident playbooks. Use when planning SRE work or production readiness.
+  invocation_policy: auto
+  status: active
+- name: performance-readiness
+  path: plugin/crafting-system/skills/performance-readiness/SKILL.md
+  description: Audit performance and capacity readiness including hotpaths, slow tests, unbounded queries or loops, and load-test coverage. Use when reviewing performance posture.
+  invocation_policy: auto
+  status: active
+- name: api-contract-readiness
+  path: plugin/crafting-system/skills/api-contract-readiness/SKILL.md
+  description: Audit API contract compatibility, deprecation strategy, and version migration. Use when planning a contract change.
+  invocation_policy: auto
+  status: active
+- name: data-migration-safety
+  path: plugin/crafting-system/skills/data-migration-safety/SKILL.md
+  description: Assess database migration reversibility, idempotency, transactional safety, and destructive-change risk. Use before applying or shipping a migration.
+  invocation_policy: auto
+  status: active
+- name: well-architected-readiness
+  path: plugin/crafting-system/skills/well-architected-readiness/SKILL.md
+  description: Audit operational excellence, cost, sustainability, and well-architected posture. Use when preparing a cost or sustainability review.
+  invocation_policy: auto
+  status: active
+- name: release-deployment-readiness
+  path: plugin/crafting-system/skills/release-deployment-readiness/SKILL.md
+  description: Audit release, launch, and deployment readiness including rollout, rollback, smoke tests, and runbook. Use when preparing a release.
+  invocation_policy: auto
+  status: active
+- name: release-go-no-go
+  path: plugin/crafting-system/skills/release-go-no-go/SKILL.md
+  description: Render a go/no-go release board from readiness gate evidence. Use when calling a release decision.
+  invocation_policy: auto
+  status: active
+- name: executive-readiness-summary
+  path: plugin/crafting-system/skills/executive-readiness-summary/SKILL.md
+  description: Generate an executive summary of repository readiness across security, supply-chain, OSS, observability, performance, docs, compliance, API, data, AI-readiness, MCP, and release. Use when
+    reporting up to leadership.
+  invocation_policy: auto
+  status: active
+- name: risk-register
+  path: plugin/crafting-system/skills/risk-register/SKILL.md
+  description: Maintain an engineering risk register with severity, likelihood, evidence, and remediation owner. Use when capturing technical risk for a project.
+  invocation_policy: auto
+  status: active
+- name: prompt-conflict-detector
+  path: plugin/crafting-system/skills/prompt-conflict-detector/SKILL.md
+  description: Detect contradictions, redundancies, and missing dependencies across a prompt set. Use when auditing a prompt library.
+  invocation_policy: auto
+  status: active
+- name: prompt-compression
+  path: plugin/crafting-system/skills/prompt-compression/SKILL.md
+  description: Compress a prompt without weakening contracts, gates, or output schemas. Use when token budget is tight.
+  invocation_policy: auto
+  status: active
+- name: unsupported-claim-detector
+  path: plugin/crafting-system/skills/unsupported-claim-detector/SKILL.md
+  description: Scan an LLM output for unsupported claims, fabrications, or missing evidence. Use when validating a generated report.
+  invocation_policy: auto
+  status: active
+- name: golden-output-validator
+  path: plugin/crafting-system/skills/golden-output-validator/SKILL.md
+  description: Validate generated artifacts against golden output fixtures with exact-match or fuzzy comparison. Use when running prompt regression suites.
+  invocation_policy: auto
+  status: active
+- name: dependency-boundary-enforcer
+  path: plugin/crafting-system/skills/dependency-boundary-enforcer/SKILL.md
+  description: Enforce module and package dependency boundaries against a target architecture document. Use when reviewing imports against architecture rules.
+  invocation_policy: auto
+  status: active
+- name: runtime-drift-detector
+  path: plugin/crafting-system/skills/runtime-drift-detector/SKILL.md
+  description: Compare runtime surfaces (HTTP, CLI, jobs, events, MCP) against documented or generated descriptors. Use when checking surface drift after refactor.
+  invocation_policy: auto
+  status: active
+- name: repo-intel-db
+  path: plugin/crafting-system/skills/repo-intel-db/SKILL.md
+  description: Build a repository intelligence database (symbols, deps, tests, owners, surfaces) for fast Q&A and audits. Use when standing up a knowledge base for a repo.
+  invocation_policy: auto
   status: active

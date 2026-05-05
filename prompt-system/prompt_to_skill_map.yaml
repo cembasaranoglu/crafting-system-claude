@@ -289,3 +289,95 @@ prompt_to_skill_map:
 - skill: scheduled-scoring
   prompts:
   - 163_scheduled_scoring_system.md
+- skill: source-analysis-pack
+  prompts:
+  - 01_source_analysis_to_artifact_pack.md
+- skill: competitor-analysis
+  prompts:
+  - 12_competitor_analysis.md
+  - 80_product_vision_market_readiness.md
+- skill: codebase-search-and-answer
+  prompts:
+  - 13_codebase_search_and_answer_prompt.md
+  - 110_source_cited_repo_answerer.md
+- skill: testing-pyramid
+  prompts:
+  - 16_testing_pyramid_and_unit_tests.md
+  - 119_test_seam_refactor.md
+- skill: k8s-runtime-ops
+  prompts:
+  - 17_kubernetes_runtime_operations.md
+  - 73_observability_incident_sre_readiness.md
+- skill: api-cli-docs-audit
+  prompts:
+  - 24_api_cli_docs_contract_audit.md
+  - 77_api_contract_compatibility_readiness.md
+- skill: release-notes-writer
+  prompts:
+  - 25_changelog_migration_release_notes_prompt.md
+  - 127_supply_chain_release_reviewer.md
+- skill: pr-merge-gate
+  prompts:
+  - 31_pull_request_review_and_merge_gate.md
+  - 26_code_review_quality_gate.md
+- skill: plugin-packager
+  prompts:
+  - 34_claude_plugin_packager_prompt.md
+  - 162_oss_ready_packager.md
+- skill: observability-readiness
+  prompts:
+  - 73_observability_incident_sre_readiness.md
+- skill: performance-readiness
+  prompts:
+  - 74_performance_scalability_capacity_readiness.md
+  - 122_performance_code_review_persona.md
+- skill: api-contract-readiness
+  prompts:
+  - 77_api_contract_compatibility_readiness.md
+  - 124_api_compatibility_code_review_persona.md
+- skill: data-migration-safety
+  prompts:
+  - 78_data_schema_migration_quality_readiness.md
+  - 125_database_code_review_persona.md
+- skill: well-architected-readiness
+  prompts:
+  - 81_well_architected_cost_sustainability_readiness.md
+- skill: release-deployment-readiness
+  prompts:
+  - 83_release_launch_deployment_readiness.md
+  - 130_protected_branch_signed_release_git_gate.md
+- skill: release-go-no-go
+  prompts:
+  - 86_release_go_no_go_board.md
+  - 85_readiness_gate_aggregator.md
+- skill: executive-readiness-summary
+  prompts:
+  - 87_executive_readiness_summary.md
+  - 135_executive_summary_generator.md
+- skill: risk-register
+  prompts:
+  - 88_engineering_risk_register.md
+- skill: prompt-conflict-detector
+  prompts:
+  - 91_prompt_conflict_detector.md
+- skill: prompt-compression
+  prompts:
+  - 92_prompt_compression_without_weakening.md
+- skill: unsupported-claim-detector
+  prompts:
+  - 96_unsupported_claim_detector.md
+- skill: golden-output-validator
+  prompts:
+  - 99_golden_output_validation.md
+  - 98_prompt_regression_suite.md
+- skill: dependency-boundary-enforcer
+  prompts:
+  - 101_dependency_boundary_enforcer.md
+  - 100_architecture_fitness_functions.md
+- skill: runtime-drift-detector
+  prompts:
+  - 102_runtime_surface_drift_detector.md
+- skill: repo-intel-db
+  prompts:
+  - 108_repo_intelligence_database_builder.md
+  - 109_repo_qa_knowledge_base_builder.md
